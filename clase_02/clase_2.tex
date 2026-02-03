@@ -1,0 +1,475 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+
+\usepackage{../template/uandes169template}
+
+\begin{document}
+\author{Prof. Daniel Muñoz \\
+	\texttt{dmunoz@miuandes.cl}}
+\title{Enfoques Evaluativos}
+\subtitle{Clase 2}
+\institute{Facultad de Educación, Universidad de los Andes}
+\date{19 de marzo de 2025} %para mostrar el día de la compilación borrar esta línea.
+
+%	\begin{frame}[plain]
+\maketitle
+%	\end{frame}
+
+\section{Resumen}
+\begin{frame}{Historia de la evaluación: Primera generación. Hasta 1930}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{itemize}[<+->]
+				\item[\checkmark] Se observan los primeros indicios de evaluación en la antigua China S.II a.c.
+				\item[\checkmark] Encuentra su climax en los \textit{test de inteligencias}.
+				\item[\color{red}$\times$] \alert<3->{Lamentablemente no existe diferenciación clara entre \textit{medición} y \textit{evaluación}}
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics<1>[width=0.5\textwidth]{../imagenes/confusio.png}
+				\includegraphics<2>[width=\textwidth]{../imagenes/iq.jpg}
+				\includegraphics<3>[width=\textwidth]{../imagenes/medir.jpg}
+				\caption{
+					\only<1>{Estatua de Confucio. Filósofo y consejero de la monarquía China}
+					\only<2>{Clásico test para medir tu IQ en los años 30 con ello \textit{evaluaban tu inteligencia}}
+					\only<3>{En aquella época no entendíamos lo que realmente estamos haciendo}
+				}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Historia de la evaluación: Segunda generación. 1930 - 1957}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{itemize}[<+->]
+				\item[\checkmark] Aparece la primera definición de Evaluación Educativa, gracias a Ralph Tyler.
+				\item[\checkmark] El incorpora las ideas de \textit{Objetivo} como \textit{criterio} para determinar el \textit{logro}.
+				\item[\checkmark] Con esto logramos separar las aguas entre Evaluación y medición.
+				\item[\color{red}$\times$] \alert<4->{Lamentablemente no sabiamos cómo mejorar.}
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics<1-2>[width=0.5\textwidth]{../imagenes/tyler.jpg}
+				\includegraphics<3>[width=0.7\textwidth]{../imagenes/no_medir.jpg}
+				\includegraphics<4>[width=\textwidth]{../imagenes/better.jpg}
+				\caption{
+					\only<1-2>{Ralph Tyler (1902-1994). Profesor EEUU que logró conceptualizar la \textit{evaluación educativa}}
+					\only<3>{Mejoramos nuestra demarcación del \textit{fenómeno}}
+					\only<4>{Pero, ¿Cómo mejoramos?}
+				}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Historia de la evaluación: Tercera generación. 1957 - 1972}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{itemize}[<+->]
+				\item[\checkmark] Necesitamos saber que nuestros impuestos se están gastando \textit{bien}.
+				\item[\checkmark] La \textit{rendición de cuentas} o \textit{accountability} toma preponderancia.
+				\item[\checkmark] Aparecen las pruebas estandarizadas. Y nos hacemos cargo de tomar decisiones.
+				\item[\color{red}$\times$] \alert<4->{Pero nos medimos todos con la misma \textit{regla}.}
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics<1-2>[width=0.5\textwidth]{../imagenes/accountability}
+				\includegraphics<3>[width=0.7\textwidth]{../imagenes/pisa}
+				\includegraphics<4>[width=\textwidth]{../imagenes/survey}
+				\caption{
+					\only<1-2>{Señorita Wilcox, envíe a alguien a quién culpar}
+					\only<3>{Informe del Programa Internacional para la Evaluación de Estudiantes}
+					\only<4>{``Para una selección justa todos tendrán el mismo examen: Por favor trepen ese árbol''}
+				}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Historia de la evaluación: Cuarta generación. desde 1973 \textit{hasta 1990}}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{itemize}[<+->]
+				\item[\checkmark] Empiezan a idearse nuevos modelos educativos, todos diferentes.
+				\item[\checkmark] Todos motivados por la nueva corriente del constructivismo.
+				\item[\color{teal}\checkmark] \color{teal} Aparece la perspectiva \textit{naturalizada} de la evaluación.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics<1>[width=0.4\textwidth]{../imagenes/stake}
+				\includegraphics<2>[width=\textwidth]{../imagenes/piaget}
+				\includegraphics<3>[width=\textwidth]{../imagenes/no_positivista}
+				\caption{
+					\only<1>{Robert E. Stake (1927 - ). Psicólogo EEUU especialista en evaluación cualitativa, creó el modelo de \textit{Evaluación respondiente}}
+					\only<2>{Jean Piaget y Lev Vigotsky padres del constructivismo}
+					\only<3>{La visión naturalizada de la evaluación tiene un fuerte componente \textit{no positivista}}
+				}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Conceptualización: Evaluación, Medición y Calificación}
+	\only<1>{\begin{block}{Evaluación}
+			\begin{quote}
+				``La evaluación es el proceso de recogida y tratamiento de informaciones pertinentes, válidas y [con]fiables para permitir, a los actores interesados, tomar las decisiones que se impongan para mejorar las acciones y los resultados.''
+			\end{quote}
+			\begin{flushright}
+				(UNESCO, 2005 citado en Rosales, 2014 \nocite{ROSALES2014})
+			\end{flushright}
+		\end{block}}
+	
+	\only<2>{\begin{block}<2>{Medición}
+			\begin{quote}
+				``Proceso de obtener una expresión numérica de algo en forma tal que nos permita hacer comparaciones cuantitativas con un patrón determinado. Su razón de ser es obtener datos para la evaluación.''
+			\end{quote}
+			\begin{flushright}
+				\cite{ROSALES2014}
+			\end{flushright}
+
+		\end{block}}
+	\only<3>{\begin{block}<3>{Calificación}
+			\begin{quote}
+				``La calificación es la expresión cualitativa (apto/no apto) o cuantitativa (10, 9, 8, etc) del juicio de valor que emitimos sobre la actividad y logros.''
+			\end{quote}
+			\begin{flushright}
+				\cite{RUIZ2009}
+			\end{flushright}
+		\end{block}}
+\end{frame}
+
+\section{Clasificación en la evaluación \cite{CASTILLO2010}}
+
+\begin{frame}{Introducción a la clasificación de la evaluación}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{itemize}[<+->]
+				\item La clasificación es importante para entender un fenómeno, idea Aristotélica del conocimiento.
+				\item A partir de la clasificación del fenómeno evaluativo usted podrá entenderlo con mayor profundidad.
+				\item Se espera que usted domine las siguientes definiciones y pueda reconocer el tipo de evaluación a partir de diferentes contextos relatados.
+				\item Finalizando el barniz teórico, procederemos a una actividad formativa.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\includegraphics[width=\textwidth]{../imagenes/classification}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Clasificación según Agente}
+
+\begin{frame}{Clasificación Según Agente}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}[<+->]
+				\item Se entiende por \textit{agente}, al \textit{evaluador}, sujeto que elabora el juicio [y toma una decisión].
+				\item Dado este definición existen tres clasificaciones.
+			\end{itemize}
+			\only<3-4>{
+				\begin{block}{Heteroevaluación}
+					Si el \textit{evaluador} y el \textit{evaluando} (sujeto a evaluar o evaluado)  son personas diferentes que han experimentado situaciones de aprendizaje \textbf{diferentes}.
+				\end{block}}
+			\only<5-6>{
+				\begin{block}{Coevaluación}
+					Si el \textit{agente} y el \textit{evaluando} son personas diferentes que han experimentado situaciones de aprendizaje \textbf{similares}.
+				\end{block}}
+			\only<7-8>{
+				\begin{block}{Autoevaluación}
+					Si el \textit{agente} y el \textit{evaluando} son la misma persona.
+				\end{block}}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\only<4>{
+				\begin{quote}
+					El profesor de Evaluación tomará una prueba al final del módulo.
+				\end{quote}}
+			\only<6>{
+				\begin{quote}
+					Juanita evalua el desempeño de su compañero de grupo.
+				\end{quote}}
+			\only<8>{
+				\begin{quote}
+					Pedro evaluará su desempeño a partir de una prueba que entregó su profesor.
+				\end{quote}}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Clasificación según Referente}
+
+\begin{frame}{Clasificación Según Referente/Normotipo}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}[<+->]
+				\item Se entiende por \textit{referente}, al \textit{criterio}, de comparación con el cual evaluaremos al sujeto.
+				\item Dado este definición existen tres clasificaciones.
+			\end{itemize}
+			\only<3-4>{
+				\begin{block}{Evaluación criterial o Nomotética (externo al sujeto)}
+					Este tipo de evaluación compara el desempeño de un estudiante respecto de un criterio ideal, generalmente este criterio se expresa como \textit{Objetivo de Aprendizaje}.
+				\end{block}}
+			\only<5-6>{
+				\begin{block}{Evaluación normativa o Nomotética (externo al sujeto)}
+					Este tipo de evaluación compara el desempeño del sujeto con respecto a la \textit{media de la población o muestra}, este tipo de evaluaciones son comunes cuando se evalúa a \textit{gran escala}.
+				\end{block}}
+			\only<7-8>{
+				\begin{block}{Evaluación Ideográfica}
+					El referente es el \textit{sujeto mismo}, sus capacidades y sus posibilidades de desarrollo, este tipo de evaluación esta inspirado en la teoría de la \textit{Zona de Desarrollo Próximo}.
+				\end{block}}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\only<4>{
+				\begin{quote}
+					El profesor de cálculo de la carrera de ingeniería revisa los exámenes finales, para determinar los que aprobaron.
+				\end{quote}}
+			\only<6>{
+				\begin{quote}
+					Pedro saco 800 puntos en la prueba PAES, pero Juanita 600, a pesar que el año pasado obtuvo 680.
+				\end{quote}}
+			\only<8>{
+				\begin{quote}
+					El profesor de educación física le solicita a Ramón en la unidad de trote un examen de coordinación dado el problema de movilidad que posee.
+				\end{quote}}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Clasificación según Intencionalidad}
+
+\begin{frame}{Clasificación según Intencionalidad}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}[<+->]
+				\item Se entiende por \textit{intencionalidad}, al \textit{tipo de juicio y su propósito} respecto del sujeto.
+				\item Dado este definición existen tres clasificaciones.
+			\end{itemize}
+			\only<3-4>{
+				\begin{block}{Evaluación Diagnóstica}
+					El evaluador aquí tiene por intención determinar el nivel basal, \textit{conocimientos previos} o su zona de desarrollo real, respecto de un objeto a enseñar.
+				\end{block}}
+			\only<5-6>{
+				\begin{block}{Evaluación Formativa}
+					El evaluador tiene por propósito determinar el progreso del sujeto durante el proceso de enseñanza para evaluar el avance y tomar acciones.
+				\end{block}}
+			\only<7-8>{
+				\begin{block}{Evaluación Sumativa}
+					El evaluador tiene por propósito formarse un juicio definitivo respecto del desempeño del sujeto evaluado.
+				\end{block}}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\only<4>{
+				\begin{quote}
+					El profesor realizó preguntas al inicio para determinar nuestro dominio de inglés.
+				\end{quote}}
+			\only<6>{
+				\begin{quote}
+					La profesora nos entregó una guía de ejercicios, la revisó y la entrego corregida con comentarios.
+				\end{quote}}
+			\only<8>{
+				\begin{quote}
+					Mañana tenemos la prueba de cálculo y vale el 50\% de la nota.
+				\end{quote}}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Clasificación según Momento}
+
+\begin{frame}{Clasificación según Momento}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}[<+->]
+				\item Se entiende por \textit{momento}, al \textit{tiempo cronológico} respecto del avance de la unidad didáctica.
+				\item Dado este definición existen tres clasificaciones.
+			\end{itemize}
+			\only<3-4>{
+				\begin{block}{Evaluación Inicial}
+					Aquí la evaluación ocurre al inicio de la unidad didáctica.
+				\end{block}}
+			\only<5-6>{
+				\begin{block}{Evaluación Intermedia}
+					Evaluación que ocurre durante la unidad didáctica.
+				\end{block}}
+			\only<7-8>{
+				\begin{block}{Evaluación Final}
+					Evaluación que ocurre al final de la unidad didáctica.
+				\end{block}}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\only<4>{
+				\begin{quote}
+					La primera clase el profesor nos hizo algunas preguntas.
+				\end{quote}}
+			\only<6>{
+				\begin{quote}
+					El profesor de matemáticas siempre nos está revisando las guías de ejercicios.
+				\end{quote}}
+			\only<8>{
+				\begin{quote}
+					La última clase tuvimos la prueba.
+				\end{quote}}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Resumen}
+
+	Según su:
+	\begin{table}
+		\rowcolors[]{1}{blue!20}{blue!10}
+		\begin{tabular}{|l|llr|}
+			\hline
+			\textbf{momento}                                & \multicolumn{1}{l}{inicial}     & procesual   & final     \\ \hline
+			\textbf{finalidad o funciones}                  & \multicolumn{1}{l}{Diagnóstica} & Formativa   & Sumativa  \\ \hline
+			\textbf{extensión}                              & \multicolumn{2}{l}{Global}      & Parcial                 \\ \hline
+			\textbf{procedencia de los agentes evaluadores} & \multicolumn{2}{l}{Interna}     & Externa                 \\ \hline
+			\textbf{agentes}                                & \multicolumn{1}{l}{Auto}        & Hetero      & Co        \\ \hline
+			\textbf{normotipo}                              & \multicolumn{1}{l}{Normativa}   & Ideográfica & Criterial \\ \hline
+		\end{tabular}
+		\caption{Modificado de Castillo, 2010}
+	\end{table}
+\end{frame}
+
+\section{Enfoques Evaluativos}
+
+\begin{frame}{Enfoques Evaluativos}
+	Existen dos grandes \textit{paradigmas} en la \textit{evaluación educativa}, uno de ellos es el enfoque \textit{psicométrico} y el otro es el enfoque \textit{edumétrico}.
+
+	\begin{center}
+		\rowcolors[]{1}{blue!20}{blue!10}
+		\begin{tabular}{l!{\vrule}cc} %l!{\vrule} agrega una línea vertical
+			\hline
+			             & \textbf{Psicométrico} & \textbf{Edumétrico}          \\ \hline
+			Conocimiento & Positivista           & Naturalizado \pause          \\
+			Historia     & tercera generación    & cuarta generación \pause     \\
+			Propósito    & rendición de cuentas  & mejora \pause                \\
+			Cobertura    & gran escala           & pequeña y meso escala \pause \\
+			Paradigma    & cuantitativo          & cualitativo                  \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\section{Funciones de la evaluación}
+
+\begin{frame}{Funciones de la evaluación}
+	Existen dos grandes \textit{propósitos} que cumple la evaluación educativa: la \textit{función social} y la \textit{función pedagógica}
+
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{block}{Social}
+				\begin{itemize}[<+->]
+					\item Fuera del aula.
+					\item Rinde cuentas a la sociedad.
+					\item Certificando aprendizaje y competencias.
+					\item Control social (ej. EUNACOM).
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{block}{Pedagógica}
+				\begin{itemize}
+					\item<5-> Se da al interior del aula.
+					\item<6-> Posee tres funciones:
+					      \begin{enumerate}
+						      \item<7-> Selección de individuos y ejercicio del control administrativo.
+						      \item<8-> Homogeneidad de: cultura, aprendizajes, competencias, desarrollo, etc.
+						      \item<9-> Motivación extrínseca, competitividad entre sujetos, etc.
+					      \end{enumerate}
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Quinta generación: algunos nombres que debe conocer}
+
+\begin{frame}{Quinta generación de la evaluación}
+	\only<1>{En evaluación existe una enorme cantidad de conceptos utilizados académicamente, es importante que usted pueda manejarlos para que no se sienta desorientado si los lee u oye, según Noelia Alcaraz (2015) reflejo de la era \textit{ecléctica de la evaluación}.}
+
+	\only<2->{
+		\begin{columns}
+			\begin{column}{.5\textwidth}
+				\begin{block}{3ra gen. eval.}
+					\begin{itemize}[<+->]
+						\item Eval. Tradicional
+						\item Eval. Sumativa
+					\end{itemize}
+				\end{block}
+				\begin{block}{4ta gen de la eval.}
+					\begin{itemize}[<+->]
+						\item Eval. auténtica
+						\item Eval. naturalizada
+						\item Eval. Cualitativa
+					\end{itemize}
+				\end{block}
+				\begin{block}{Evaluación sumativa}
+					\begin{itemize}[<+->]
+						\item Eval. de aprendizajes
+						\item Eval. cuantitativa
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\textwidth}
+				\begin{block}{Eval. psicométrica}
+					\begin{itemize}[<+->]
+						\item Eval. estandarizada.
+						\item Eval. cuantitativa.
+						\item Eval. positivista.
+					\end{itemize}
+				\end{block}
+				\begin{block}{Eval. formativa}
+					\begin{itemize}[<+->]
+						\item Eval. como aprendizaje
+						\item Eval. para el aprendizaje
+						\item Eval. cualitativa
+						\item Eval. para la mejora.
+					\end{itemize}
+				\end{block}
+			\end{column}
+		\end{columns}}
+\end{frame}
+
+
+\section{Evaluación Formativa}
+
+
+\begin{frame}{Actividad}
+	\begin{block}{}
+		En grupos y elaboren tres ejemplos de cada tipo de evaluación. Al final de la actividad comentaremos sus ejemplos entre la clase.
+	\end{block}
+\end{frame}
+
+\section{Bibliografía}
+
+\begin{frame}[allowframebreaks]{Bibliografía}
+
+	\bibliography{../bibliografia}
+
+\end{frame}
+
+{
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}[plain]{}
+	\makebox[\linewidth]{\includegraphics[width=\paperwidth]{../template/background-last-page}}
+\end{frame}
+}
+\end{document}

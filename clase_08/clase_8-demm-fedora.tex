@@ -1,0 +1,609 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage[]{wasysym}
+\usepackage{tabularx} % para ajuste del tamaño de la tabla
+\usepackage{multirow} % juntar filas en una tabla
+
+\newcommand\encircle[1]{% Poder crear letras dentro de círculos
+	\tikz[baseline=(X.base)]
+	\node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+
+% INICIO DEL TEMPLATE
+\usetikzlibrary{shapes.geometric,arrows.meta}
+
+\pgfdeclareimage[width=16.2cm]{mybackground}{../template/background_title_page}
+\setbeamertemplate{title page}{%
+	\begin{picture}(0,0)
+		\put(-45,-154){%
+			\pgfuseimage{mybackground}
+		}
+		\put(40,-8){%
+			%\fbox{
+				\begin{minipage}[b][11mm][t]{70mm}
+					\usebeamerfont{title}{\color{white} \inserttitle\par}
+			\end{minipage}}
+			%}
+		\put(36,-35){
+			%\fbox{
+				\begin{minipage}[b][5mm][t]{100mm}
+					\usebeamerfont{subtitle}{\color{white}\insertsubtitle\par}
+				\end{minipage}
+				%}
+		}
+
+		\put(36,-120){
+			%\fbox{
+				\begin{minipage}[b][10mm][t]{100mm}
+					\usebeamerfont{author}{\color{white}\insertauthor\par}
+				\end{minipage}
+				%}
+		}
+		\put(-20,-130){
+			\rotatebox{90}{\usebeamerfont{date}{\scriptsize{\color{white}\insertdate\par}}}
+		}
+	\end{picture}
+
+}
+
+
+\pgfdeclareimage[width=16.2cm]{sectionbackground}{../template/background_section_page}
+\setbeamertemplate{section page}{%
+	\begin{picture}(0,0)
+		\put(-45,-154){%
+			\pgfuseimage{sectionbackground}
+		}
+		\put(200,-70){
+			%\fbox{
+				\begin{minipage}[b][30mm][t]{50mm}
+					\usebeamerfont{section}{\color{white}\LARGE\insertsection\par}
+				\end{minipage}
+				%}
+		}
+	\end{picture}
+}
+
+\AtBeginSection{\frame[plain]{\sectionpage}}
+
+\setbeamertemplate{background}{
+	\includegraphics[width=16.2cm]{../template/background_slide_page}
+}
+
+\setbeamertemplate{frametitle}{
+	%\fbox{
+		\begin{minipage}[c][14mm][b]{\textwidth}
+			\usebeamerfont{frametitle}{\color{black}\insertframetitle}
+	\end{minipage}}
+	%}
+
+\setbeamersize{text margin left=4em}
+\setbeamersize{text margin right=4em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INICIO DEL CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\author{Prof. Daniel Muñoz \\ 
+		\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+	\title{Técnicas de Observación, Interrogación y Preguntas Cerradas}
+	\subtitle{Clase 9}
+	%\subject{subject}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+
+	\section{Encuesta de mitad de semestre}
+	\begin{frame}{(2022) Encuesta de mitad de semestre: Parte Likert}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item En esta asignatura estoy recibiendo retroalimentación oportuna que me ayuda a aprender.
+					\item En esta asignatura recibo un trato personalizado que considera las circunstancias especiales que estamos viviendo.
+					\item Existe una coherencia entre las evaluaciones y la metodología de trabajo.
+					\item Mis profesores en esta asignatura se han adaptado bien a la modalidad online.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\begin{tikzpicture}
+					\only<1>{
+						\pie[radius=2]{
+							88/Acuerdo,
+							12/Desacuerdo}
+						}
+					\only<2>{
+						\pie[radius=2]{
+							81/Acuerdo,
+							19/Desacuerdo
+						}}
+					\only<3>{
+						\pie[radius=2]{
+							88/Acuerdo,
+							12/Desacuerdo
+						}}
+					\only<4>{
+						\pie[radius=2]{
+							100/Acuerdo,
+							0/Desacuerdo
+						}}
+					\end{tikzpicture}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Encuesta de mitad de semestre: Mitad cualitativa}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{figure}
+					\begin{tikzpicture}
+						\pie[radius=1.8]{
+							18/Retro.,
+							9/Online,
+							9/Presentaciones,
+							9/Clase,
+							55/Disposición
+						}
+					\end{tikzpicture}
+					\caption{Lo Destacado, en general: La disposición a responder consultas}
+				\end{figure}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\begin{figure}
+					\begin{tikzpicture}
+						\pie[radius=1.8]{
+							14/evaluación,
+							14/validez semántica,
+							14/retro. de clase,
+							58/t. de exposición
+						}
+					\end{tikzpicture}
+					\caption{Lo que debe mejorar, la duración de la clase expositiva}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\section{Instrumentos de evaluación}
+	\begin{frame}{Instrumentos \cite{CASTILLO2010}}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Todo proceso evaluativo contempla la mediación de un instrumento.
+					\item La selección del instrumento dependerá de múltiples criterios los cuales deben conjugarse en una \textbf{decisión}.
+					\item Algunos ejemplos de instrumentos de evaluación para \textbf{diferentes técnicas}.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1>{
+					\begin{figure}
+						\includegraphics[width=.7\linewidth]{../imagenes/assesment_process.jpg}
+						\caption{Proceso evaluativo \cite{JMADISONU2021}}
+					\end{figure}
+				}
+				\only<2>{
+					\begin{itemize}
+						\item Número de sujetos.
+						\item Recursos económicos.
+						\item Tiempo disponible.
+						\item Objetivos de aprendizaje.
+						\item Tipo de \textit{referente}.
+						\item Modo (asincrónico/sincrónico).
+						\item Tipo de \textit{agente}. 
+					\end{itemize}
+				}
+				\only<3>{
+					\begin{columns}
+						\begin{column}{.5\linewidth}
+							\begin{itemize}
+								\item Técnicas de Observación:
+								\begin{itemize}
+									\item Cuadernos.
+									\item Diarios.
+									\item Escalas de obs.
+									\item Listas de cotejo.
+									\item Registro anecódticos.
+								\end{itemize}
+							\end{itemize}
+						\end{column}
+						\begin{column}{.5\linewidth}
+							\begin{itemize}
+								\item Técnicas de interrogación: 
+								\begin{itemize}
+									\item KPSI.
+									\item Exámenes.
+									\item Pruebas objetivas.
+									\item Pruebas estandarizadas.
+									\item Encuestas.
+								\end{itemize}
+							\end{itemize}
+						\end{column}
+					\end{columns}}
+			\end{column}
+		\end{columns}		
+	\end{frame}
+	
+	\subsection{Técnicas de Observación}
+	\begin{frame}{Técnicas evaluativas: Observación}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+					\justifying
+					El sujeto posee una actitud pasiva frente al evaluador y el instrumento. Este tipo de técnicas se usan con frecuencia para registrar el \textit{día a día}.
+					\begin{itemize}
+						\item sistematizada
+							\begin{itemize}
+								\item Listas de cotejo
+								\item<2-> escalas de estimación
+							\end{itemize}
+						\item no sistematizada 
+							\begin{itemize}
+								\item<3-> notas de campo.
+								\item<4-> registros anecdóticos.
+								\item<5-> diario.
+								\item<6-> Registro de evidencias.
+							\end{itemize}
+					\end{itemize} 
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\begin{exampleblock}{Ejemplo}
+					\only<1>{
+						Nombre: Pedro Urdemales\\
+						Curso: 4-A\\
+						Asignatura: Lenguaje\\
+						Fecha: 25-04-2021\\
+					\begin{tabularx}{\linewidth}{|X|c|}
+						\hline
+						\textbf{Categoría} & \textbf{Obs.} \\
+						\hline
+						Levanta la mano antes de intervenir & \checkmark \\
+						\hline
+						Se dirige al profesor con un lenguaje culto-formal & $\times$ \\
+						\hline
+						Mantiene un higiene personal adecuado & \checkmark \\
+						\hline
+					\end{tabularx}}
+					\only<2>{
+						Nombre: Pedro Urdemales\\
+						Curso: 4-A\\
+						Fecha: 25-04-2021\\
+						Muy presente 4 3 2 1 0 Ausente
+						\begin{tabularx}{\linewidth}{|X|c|}
+							\hline
+							\textbf{Categoría} & \textbf{Obs.} \\
+							\hline
+							Levanta la mano antes de intervenir & 4 \\
+							\hline
+							Se dirige al profesor con un lenguaje culto-formal & 0 \\
+							\hline
+							Mantiene un higiene personal adecuado & 2 \\
+							\hline
+						\end{tabularx}
+					}
+					\only<3>{
+						Fecha: 25-04-2021\\
+						\justifying
+						Se escribe respecto de lo que se observa, impresiones y reflexiones del docente respecto de lo que observa.
+					}
+					\only<4>{
+						Fecha: 25-04-2021\\
+						\justifying
+						Se registra todo hecho totalmente anormal que observe el docente.
+					}
+					\only<5>{
+						Fecha: 25-04-2021\\
+						\justifying
+						El docente registrará de forma diaria sus observaciones respecto de: el grupo curso, estudiantes y/o su propia práctica (diario docente).
+					}
+					\only<6>{
+						Fecha: 25-04-2021\\
+						Evidencia: Cuaderno del estudiante Pedro Urdemales\\
+						\justifying
+						Aquí se registrará lo observado respecto de alguna evidencia: cuadernos del estudiante, guías de trabajo, registros anecdóticos, diarios, etc. 
+					}
+				\end{exampleblock}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\subsection{Técnicas de Interrogación}
+	\begin{frame}{Técnicas de Interrogación}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\justifying
+				Los instrumentos de interrogación dependen de una participación activa del sujeto en el proceso. Esta técnica nace de la \textit{mayéutica} socrática.
+				\begin{itemize}
+					\item<2-> Entrevistas: estructuradas, semi-estructuradas.
+					\item<3-> Encuestas.
+					\item<4-> Exámenes.
+					\item<5-> Pruebas Objetivas.
+					\item<6-> Test.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1>{
+				\begin{figure}
+					\includegraphics[width=.8\linewidth]{../imagenes/mayeutica.jpg}
+					\caption{\justifying proceso por el cual se devela el conocimiento del sujeto y enseña la verdad por medio de preguntas y respuesta}
+				\end{figure}}
+				\only<2>{
+					\begin{block}{Entrevistas}
+						\begin{itemize}\justifying
+							\item \textbf{Instrumento:} Pautas de entrevistas.
+							\item \textbf{ítems:} Preguntas abiertas.
+							\item \textbf{¿Qué es?:} Conversación que sigue una pauta para develar información del sujeto. La diferencia entre la estructurada y semi-estructurada que la segunda admite por parte del entrevistado indagación adicional que no está en la \textit{pauta de entrevista}.
+						\end{itemize}
+					\end{block}
+				}
+				\only<3>{
+					\begin{block}{Encuestas}
+						\begin{itemize}
+							\justifying
+							\item \textbf{Instrumento:} Cuestionario (papel o digital).
+							\item \textbf{ítems:} Escalas de apreciación, preguntas abiertas.
+							\item \textbf{¿Qué es?:} Proceso de interrogación que busca saber el parecer de un sujeto respecto de un objeto para inferir por parte del evaluador alguna variable latente. valores, preferencias, actitudes, etc.
+						\end{itemize}
+					\end{block}
+				}
+				\only<4>{
+					\begin{block}{Exámenes}
+						\begin{itemize}
+							\justifying
+							\item \textbf{Instrumento:} examen escrito/online, examen oral/sincrónico.
+							\item \textbf{ítems:} Preguntas cerradas y Preguntas abiertas.
+							\item \textbf{¿Qué es?:} Proceso de interrogación que busca determinar el nivel de dominio de un desempeño de bajo y/o alto nivel cognitivo \textit{respecto de un criterio}.
+						\end{itemize}
+					\end{block}
+				}
+				\only<5>{
+					\begin{block}{Pruebas Objetivas}
+						\begin{itemize}
+							\justifying
+							\item \textbf{Instrumento:} examen escrito/online.
+							\item \textbf{ítems:} Preguntas cerradas.
+							\item \textbf{¿Qué es?:} Un caso especial de examen que es únicamente escrito y posee solamente preguntas cerradas.
+						\end{itemize}
+					\end{block}
+				}
+				\only<6>{
+					\begin{block}{Tests}
+						\begin{itemize}
+							\justifying
+							\item \textbf{Instrumento:} Prueba escrita/online.
+							\item \textbf{ítems:} Preguntas cerradas.
+							\item \textbf{¿Qué es?:} Proceso de interrogación que busca determinar la intensidad de la presencia de un atributo respecto de \textit{media de la muestra/población}.
+						\end{itemize}
+					\end{block}
+				}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\subsubsection{Preguntas de Opción Múltiple}
+	
+	\begin{frame}{Ítems: Pregunta cerrada \cite{MIDE2021}}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				Los ítems de preguntas cerradas o repuesta única pueden ser:
+				\begin{itemize}
+					\item<1-> términos pareados
+					\item<2-> completación.
+					\item<3-> ordenamiento.
+					\item<4-> verdadero y falso.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+					\only<1>{
+						\begin{exampleblock}{Empareje los conceptos}
+							\begin{columns}
+								\begin{column}{.3\linewidth}
+									Columna 1
+									\begin{enumerate}
+										\item Sodio
+										\item Cloro
+										\item Xenon
+									\end{enumerate}
+								\end{column}
+								\begin{column}{.4\linewidth}
+									Columna 2
+									\begin{itemize}
+										\item[\dots] es alcalino.
+										\item[\dots] es boroídeo.
+										\item[\dots] es halógeno.
+										\item[\dots] es gas noble.
+									\end{itemize}
+								\end{column}
+							\end{columns}
+						\end{exampleblock}
+						\begin{alertblock}{Recomendaciones}
+							\begin{itemize}
+								\small
+								\justifying
+								\item Usar conceptos relacionados y ordenados 	lógicamente en ambas columnas.
+								\item Incluir más elementos en la segunda columna.
+							\end{itemize}
+						\end{alertblock}
+					}
+					\only<2>{
+						\begin{exampleblock}{Complete la oración}
+							\justifying
+							Un ..... presenta carga nula, en cambio un ..... presenta carga positivo y por el contrario un ..... presenta carga negativa.
+						\end{exampleblock}
+						\begin{alertblock}{Recomendaciones}
+							\begin{itemize}
+								\small
+								\justifying
+								\item Los espacios deben tener la misma extensión.
+								\item Usar un espacio por palabra a completar.
+								\item Evitar frases extensas y/o ambiguas.
+								\item Utilizar solamente cuando las posibilidades de respuestas son \textbf{muy limitadas}.
+							\end{itemize}					
+						\end{alertblock}
+					}
+					\only<3>{
+						\begin{exampleblock}{\justifying Ordene las siguiente particulas subatómicas según masa, siendo 1 la más liviana 3 la de mayor masa.}
+							\begin{itemize}
+								\item[\dots] quark.
+								\item[\dots] protón.
+								\item[\dots] electrón. 
+							\end{itemize}
+						\end{exampleblock}
+						\begin{alertblock}{Recomendaciones}
+							\begin{itemize}
+								\item El orden deben ser \textbf{único}.
+								\item El orden debe responder a un criterio \textit{objetivo}.
+							\end{itemize}					
+						\end{alertblock}
+					}
+					\only<4>{
+						\begin{exampleblock}{\justifying Marque la V de verdadero o F de falso según corresponda a cada enunciado}
+							\begin{tabularx}{\linewidth}{Xc}
+								Cristobal Colón descubrió América en 1592.	& \encircle{V} \encircle{F} \\
+								Las carabelas de Colón eran: La Pinta, La Niña y La Santa Iglesia & \encircle{V} \encircle{F} \\
+							\end{tabularx}
+						\end{exampleblock}
+					}
+					\only<5>{
+						\begin{alertblock}{Recomendaciones}
+							\begin{itemize}
+								\justifying
+								\item Los enunciados no deben expresar opiniones y deben ser lo \textit{más objetivos} posibles.
+								\item Solo una idea central por enunciado.
+								\item No usar conceptos que impliquen ambigüedad (ej. frecuentemente, a veces)
+								\item Evitar expresiones absolutas (jamás, siempre, nunca, todo el tiempo, etc.)
+								\item Máxima claridad en los enunciados.
+								\item Ordenar los enunciados de forma aleatoria.
+							\end{itemize}					
+						\end{alertblock}
+					}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Ítem preguntas cerradas: Opción múltiple \cite{MIDE2021}}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\textbf<2>{Lee el siguiente enunciado:
+				\begin{quote}
+					``El átomo es un esfera de carga neutra que presenta electrones incrustados en una gran base positiva``
+				\end{quote}}
+				\textbf<3>{¿Qué modelo atómico se describe en el enunciado anterior?}
+				\textbf<4-5>{
+				\begin{enumerate}
+					\item[a)] \textbf<7>{Planetario.}
+					\item[b)] \textbf<7>{Sommerfield.}
+					\item[c)] \textbf<6>{Pan de pascua.}
+					\item[d)] \textbf<7>{Mecano-cuántico.}
+				\end{enumerate}}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<2>{
+					\begin{block}{Contexto}
+						\justifying Sirve como punto de referencia para el enunciado, es optativo, puede ser: gráfico, escrito, audio o video.
+					\end{block}
+					\begin{alertblock}{Recomendaciones}
+						\begin{itemize}
+							\justifying
+							\item Incluir contexto necesarios y verosímiles.
+							\item El contexto no puede ser un elemento que de pistas de la respuesta. Por ello es necesario para responder.
+						\end{itemize}
+					\end{alertblock}
+				}
+				\only<3>{
+					\begin{block}{Enunciado}
+						\justifying Es la pregunta o tarea concreta que se le solicita al evaluado.
+					\end{block}
+					\begin{alertblock}{Recomendaciones}
+						\begin{itemize}
+							\justifying
+							\small
+							\item Claro y sin ambigüedades.
+							\item Evitar afirmaciones negativo, pero en caso de usarlas destacar la negación.
+							\item Idealmente el enunciado (más contexto) debe permitir generar la respuesta del estudiante sin ver las alternativas.
+							\item No usar \textit{doble proceso}. a) Solo I, b) Solo II, c) I y II, d) II y III, etc.
+						\end{itemize}
+					\end{alertblock}
+				}
+				\only<4>{
+					\begin{block}{Alternativas}
+						\justifying Es el número de respuestas \textbf{plausibles} para el enunciado (más contexto).
+					\end{block}}
+				\only<5>{	
+					\begin{alertblock}{Recomendaciones}
+						\begin{itemize}
+							\justifying
+							\small
+							\item Cuatro alternativas: una correcta y  tres incorrectas.
+							\item Misma estructura gramatical mismos modos y tiempos verbales.
+							\item Directas e independientes unas de otras.
+							\item Idéntica lógica y/o contenido.
+							\item Evitar el uso de \textit{ninguna de las anteriores} o similares.
+							\item Número de caracteres similares.
+							\item Ordenarlas lógicamente: menor a mayor, menos extensa a más extensa.
+						\end{itemize}
+					\end{alertblock}}
+				\only<6>{
+					\begin{block}{Clave o alternativa correcta}
+						La clave debe ser única y totalmente \textit{objetiva}.
+					\end{block}
+					\begin{alertblock}{Recomendaciones}
+						\begin{itemize}
+							\item Debe responder al enunciado.
+							\item No debe ser de una lógica diferente al resto.
+							\item Extensión similar al resto.
+							\item Evitar marcas textuales o conceptos próximos entre el enunciado y la clave.
+						\end{itemize}
+					\end{alertblock}
+				}
+				\only<7>{
+					\begin{block}{Distractores}
+						Aquellas alternativas que sirven para diferenciar a un estudiante del que no. Estas deben ser plausibles. \textit{objetiva}.
+					\end{block}
+					\begin{alertblock}{Recomendaciones}
+						\begin{itemize}
+							\justifying
+							\item Basarse en ideas previas.
+							\item Incluir errores conceptuales.
+							\item Usar creencias comunes o de dominio popular.
+							\item Usar intervenciones sus estudiantes para construirlas.
+						\end{itemize}
+					\end{alertblock}
+				}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\section{Evaluación Formativa}
+	\begin{frame}{Creación de ítems de opción múltiple}
+		\justifying
+		Ahora, individualmente, deberá \textbf{crear tres preguntas de opción múltiple para el indicador de evaluación IE1.1}, si no se puede ajustará el IE1.1 para que admita preguntas de selección múltiple de su tabla de especificaciones.
+	\end{frame}
+
+	\section{Bibliografía}
+	
+	\begin{frame}[allowframebreaks]{Bibliografía}
+		
+		\bibliography{../bibliografia}
+		
+	\end{frame}
+	
+	{
+		\setbeamertemplate{navigation symbols}{}
+		\begin{frame}[plain]{}
+			\makebox[\linewidth]{\includegraphics[width=\paperwidth]{../template/background_last_page}}
+		\end{frame}
+	}
+
+\end{document}

@@ -1,0 +1,534 @@
+\documentclass[11pt, aspectratio=169, xcolor=table]{beamer} %aspectratio=169 presentación en 16:9; xcolor=table usar color en las tablas
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{Cuerna}
+\usecolortheme{bluesimplex} %color del paquete
+\usepackage{graphicx} %incluír imágenes
+\usepackage{hyperref} %agregar urls
+\usepackage{ragged2e} %alinear a la izquierda.
+% \setbeamertemplate{bibliography item}[text] Colocar números en lugar de íconos.
+\bibliographystyle{../apalike-es} %archivo de estilo apa en español en el directorio local, otros estilos: plain.
+
+\begin{document}
+	\author{Prof. Daniel Muñoz \\ 
+		\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+	\title{Criterios de calidad en evaluación educativa}
+	%\subtitle{subtitulo}
+	\logo{
+		\includegraphics[width=1.8cm]{../marca_principal.png}
+	}
+	\institute{Facultad de Educación, Universidad de los Andes}
+	\date{1 de abril de 2022}%\today{}} %agregar el día de hoy
+	%\subject{subject}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}[plain]
+		\setbeamertemplate{logo}{} %eliminar logo de la portada
+		\maketitle
+	\end{frame}
+
+	\section{Resumen}
+	\subsection{Historia}
+		\begin{frame}{Historia de la evaluación \cite{ALCARAZ2015}}
+			\begin{columns}
+				\begin{column}{.5\textwidth}
+					\begin{itemize}[<+->]
+						\item 1G. \textit{Evaluación} = \textit{Medición}.
+						\item 2G. Ralph Tylor demarca la Evaluación Educativa.
+						\item 3G. Período del \textit{Accountability}.
+						\item 4G. \textit{Evaluación Naturalizada}.
+						\item 5G. Generación \textit{Ecléctica}.
+					\end{itemize}
+				\end{column}
+				\begin{column}{.5\textwidth}
+					\begin{figure}
+						\includegraphics<1>[width=\textwidth]{../imagenes/iq.jpg}
+						\includegraphics<2>[width=0.5\textwidth]{../imagenes/tyler.jpg}
+						\includegraphics<3>[width=0.9\textwidth]{../imagenes/accountability}
+						\includegraphics<4>[width=\textwidth]{../imagenes/no_positivista}
+						\includegraphics<5>[width=\textwidth]{../imagenes/enredo}						
+						\caption{
+							\only<1>{Clásico test para medir tu IQ en los años 30 con ello \textit{evaluaban tu inteligencia}.}
+							\only<2>{Ralph Tyler (1902-1994). Profesor EEUU que logró conceptualizar la \textit{evaluación educativa}.}
+							\only<3>{Señorita Wilcox, envíe a alguien a quién culpar.}
+							\only<4>{La visión naturalizada de la evaluación tiene un fuerte componente \textit{no positivista}.}
+							\only<5>{El \textit{argot evaluativo} ensucia más que aclara.}
+						}
+					\end{figure}
+				\end{column}
+			\end{columns}
+		\end{frame}
+	
+	\subsection{Conceptos}
+	
+		\begin{frame}{Conceptualización: Evaluación, Medición y Calificación}
+			\only<1>{\begin{block}{Evaluación}
+					\begin{quote}
+						``La evaluación es el proceso de recogida y tratamiento de informaciones pertinentes, válidas y [con]fiables para permitir, a los actores interesados, tomar las decisiones que se impongan para mejorar las acciones y los resultados.'' 
+					\end{quote}
+					\begin{flushright}
+						(UNESCO, 2005 citado en \cite{ROSALES2014})
+					\end{flushright}
+			\end{block}}
+			
+			\only<2>{\begin{block}<2>{Medición}
+					\begin{quote}
+						``Proceso de obtener una expresión numérica de algo en forma tal que nos permita hacer comparaciones cuantitativas con un patrón determinado. Su razón de ser es obtener datos para la evaluación.''
+					\end{quote}
+					\begin{flushright}
+						\cite{ROSALES2014}
+					\end{flushright}
+					
+			\end{block}}
+			\only<3>{\begin{block}<3>{Calificación}
+					\begin{quote}
+						``La calificación es la expresión cualitativa (apto/no apto) o cuantitativa (10, 9, 8, etc) del juicio de valor que emitimos sobre la actividad y logros.'' 
+					\end{quote}
+					\begin{flushright}
+						\cite{RUIZ2009}
+					\end{flushright}
+			\end{block}}
+		\end{frame}
+
+		\subsection{Clasificación}
+
+		\begin{frame}{Clasificación de la evaluación \cite{CASTILLO2010}}
+			\begin{columns}
+				\begin{column}{.5\textwidth}
+					\begin{block}{Según agente}
+						\begin{itemize}[<+->]
+							\item Heteroevaluación.
+							\item Coevaluación.
+							\item Autoevaluación.
+						\end{itemize}
+					\end{block}
+					\begin{block}{Según referente}
+						\begin{itemize}[<+->]
+							\item Nomotética
+							\begin{itemize}[<+->]
+								\item Normativa
+								\item Criterial
+							\end{itemize}
+							\item Ideográfica
+						\end{itemize}
+					\end{block}
+				\end{column}
+				\begin{column}{.5\textwidth}
+					\begin{block}{Según intencionalidad}
+						\begin{itemize}[<+->]
+							\item Diagnóstica
+							\item Formativa
+							\item Sumativa
+						\end{itemize}
+					\end{block}
+					\begin{block}{Según Momento}
+						\begin{itemize}[<+->]
+							\item Inicial
+							\item Intermedia
+							\item Final
+						\end{itemize}
+					\end{block}
+				\end{column}
+			\end{columns}
+		\end{frame}
+	
+		\subsection{Enfoques y función de la evaluación}
+		
+		\begin{frame}{Enfoques y función }
+			\begin{columns}
+				\begin{column}{0.5\textwidth}
+					\begin{block}{Enfoques \cite{MESIAS2013}}
+						\begin{itemize}[<+->]
+							\item Psicométrico
+							\item Edumétrico
+						\end{itemize}
+					\end{block}
+					\begin{block}{Funciones}
+						\begin{itemize}[<+->]
+							\item Social
+							\item Pedagógica
+							\begin{enumerate}[<+->]
+								\item Sistémica
+								\item Cultural
+								\item Actitudinal
+							\end{enumerate}
+						\end{itemize}
+					\end{block}
+				\end{column}
+				\begin{column}{0.5\textwidth}
+					\begin{figure}
+						\includegraphics<1>[width=\textwidth]{../imagenes/psychometric}
+						\includegraphics<2>[width=\textwidth]{../imagenes/edumetric}
+						\includegraphics<3->[width=.8\textwidth]{../imagenes/function}
+						\caption{
+						\only<1>{Enfoque psicométrico}
+						\only<2>{Enfoque edumétrico}
+						\only<3->{La función de la evaluación}
+						}
+					\end{figure}
+				\end{column}
+			\end{columns}
+		\end{frame}
+
+	\section{Criterios de calidad de los instrumentos de evaluación}
+	
+	\subsection{Introducción}
+	\begin{frame}{Introducción}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Los \textit{criterios de calidad} cambian fuertemente dependiendo del \textit{enfoque evaluativo} (paradigma). 
+					\item Dada las limitaciones y propósitos de este curso solo revisaremos los criterios de calidad desde la evaluación \textit{edumétrica}.
+					\item Estos son:
+					\begin{itemize}[<+->]
+						\item \textbf{Validez}
+						\item \textbf{Confiabilidad}
+						\item \textbf{Objetividad}
+					\end{itemize}
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\begin{figure}
+					\includegraphics<1>[width=\linewidth]{../imagenes/quality}
+					\includegraphics<2>[width=\linewidth]{../imagenes/limit}
+					\includegraphics<3->[width=0.7\linewidth]{../imagenes/validity}
+					\caption{
+						\only<1>{La calidad es importante en evaluación.}
+						\only<2>{No podemos estudiar todo en el curso.}
+						\only<3->{Estos conceptos nos seguirán a lo largo del curso.}
+					}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\subsection{Validez}
+	\begin{frame}{Validez}
+		\begin{columns}
+			\begin{column}{0.5\linewidth}
+				\begin{itemize}[<+->]
+					\item La \textit{validez} tiene que ver con lo que mide o busca medir un instrumento.
+					\item A muy grosso modo responde a la pregunta \textit{¿Mide lo que pretendo medir?}
+					\item Según Castillo [2010, pág. 392]:
+						\begin{quote}
+						``debe corresponder exactamente a los objetivos del aprendizaje que se pretenden evaluar según el enunciando de la pregunta.''
+						\end{quote}
+					\item Existen tres tipos de validez. 
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.5\linewidth}
+				\begin{figure}
+					\includegraphics[width=\linewidth]{../imagenes/invalid}
+					\caption{Un test inválido no solamente ocurre en la evaluación educativa.}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Validez de contenido}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\justifying
+					\item \textit{``Esta \textit{validez} se refiere a la correspondencia que existe entre el contenido/habilidades que evalúa el instrumento y el campo de conocimiento al cual se atribuye dicho contenido''} \cite{FORSTER2008}
+					\item Entonces las conclusiones solo son válidas cuando:
+					\begin{itemize}[<+->]
+						\item Los puntajes de los estudiantes vienen de estímulos de calidad y $\dots$
+						\item Son coherentes con los propósitos conceptuales para los que fueron elaborados.
+					\end{itemize}
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1-3>{
+					\begin{figure}
+						\includegraphics[width=0.6\linewidth]{../imagenes/validez_contenido}
+						\caption{Siempre es importante cuidar la calidad de las preguntas.}
+					\end{figure}
+				}
+				\only<4->{
+				\begin{block}{Resguardos}
+					\begin{itemize}[<+->]
+						\item[\checkmark] Planificar el instrumento con una \textit{tabla de especificaciones}
+						\item[\checkmark] Consultar con \textit{jueces expertos} si la situación evaluativa es adecuada para los propósitos/objetivos. 
+					\end{itemize}
+				\end{block}
+				}
+					
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Validez Instruccional}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\justifying
+					\item ``\textit{[$\dots$]esta validez corresponde a una aplicación particular de la validez de contenido y es conocida también como \textbf{validez curricular}}'' \cite{FORSTER2008}.
+					\item Aquí se ve la relación entre lo enseñado y lo evaluado.
+					\item \textit{``[$\dots$]se dice que una evaluación tiene \textbf{validez instruccional} cuando contiene situaciones evaluativas coherentes con las actividades de aprendizaje realizadas[$\dots$]''} \cite{FORSTER2008}
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1-3>{
+					\begin{figure}
+						\includegraphics[width=0.7\linewidth]{../imagenes/validez_inst}
+						\caption{Un error común en escuelas y universidades}
+					\end{figure}
+				}
+				\only<4->{
+				\begin{block}{Resguardos}
+					\begin{itemize}[<+->]
+						\item[\checkmark] Los contenidos de las actividades y situaciones evaluativas deben ser los mismos.
+						\item[\checkmark] La dificultad debe ser similar entre las actividades de clases y las situaciones.
+						\item[\checkmark] Cuidar que el lenguaje sea conocido (\textbf{Validez semántica}).
+					\end{itemize}
+				\end{block}
+				}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Validez consecuencial}
+		\begin{columns}
+			\begin{column}{0.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Esta validez tiene relación con las consecuencias que implica una situación evaluativa y los propósitos de esta.
+					\item Esto reviste implicancias éticas muy relevantes respecto de las acciones que se toman a partir de los resultados de la evaluación.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1-2>{
+					\begin{figure}
+						\includegraphics[width=0.9\linewidth]{../imagenes/validez_consec}
+						\caption{Dado el fin de las Unidades didácticas es un fenómeno que afecta los niveles de logro.}
+					\end{figure}
+				}
+				\only<3->{
+					\begin{block}{Resguardos}
+						\begin{itemize}[<+->]
+							\item[\checkmark] Definir claramente los propósitos y usos de la evaluación.
+							\item[\checkmark] Cuidar la coherencia entre la intencionalidad, agente, momento y referente.
+						\end{itemize}
+					\end{block}	
+				}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\subsection{Confiabilidad}
+
+	\begin{frame}{Confiabilidad}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item La confiabilidad desde la \textit{psicometría} hace relación a que el instrumento en circunstancias similares se comporta de forma idéntica.
+					\item En el aula la confiabilidad hace referencia a que si tenemos \textit{suficiencia} de información para tomar un decisiones. 
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1-2>{
+					\begin{figure}
+						\includegraphics[width=0.9\linewidth]{../imagenes/confiabilidad}
+						\caption{En investigación es común ver autores que determinan tendencias sin la información suficiente}
+					\end{figure}}
+				\only<3->{
+					\begin{block}{Resguardos}
+						\begin{itemize}[<+->]
+							\item[\checkmark] Aplicar al mismo sujeto variadas situaciones evaluativas que midan el mismo aprendizaje.
+							\item[\checkmark] Velar porque el contexto cumpla con los estándares de la enseñanza.
+							\item[\checkmark] Cuidar la claridad de ítems e instrucciones.
+							\item[\checkmark] Precisión en la revisión.
+						\end{itemize}
+					\end{block}}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\subsection{Objetividad}
+
+	\begin{frame}{Objetividad}
+		\begin{columns}
+			\begin{column}{0.5\linewidth}
+				\begin{itemize}[<+->]
+					\justifying
+					\item La \textit{objetividad} es la precisión de la corrección de un proceso evaluativo.
+					\item En otros términos que los juicios sean completamente imparciales.
+					\item Está descrito que estudiantes son valorados según su rendimiento, \textit{efecto Pigmalión} \cite{FORSTER2008}.
+					\item En resumen: a los estudiantes con ``altas calificaciones'' los ``evaluamos'' con altas calificaciones y a los estudiantes con  ``bajas calificaciones'' los ``evaluamos'' con bajas calificaciones.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1-4>{
+					\begin{figure}
+						\includegraphics<1-2>[width=0.8\linewidth]{../imagenes/objetividad}
+						\includegraphics<3-4>[width=0.5\linewidth]{../imagenes/pigmalion}
+						\caption{
+							\only<1-2>{\textit{``quien cree que la evaluación de los estudiantes es una acción objetiva, se embarca en una tarea imposible''} \cite{FORSTER2008}}
+							\only<3-4>{El escultor Pigmalión se enamoró tanto de su escultura, Galatea, que Afrodita la transformo en una mujer real para él.}
+						}
+					\end{figure}}
+				\only<5->{
+					\begin{block}{Resguardos}
+						\begin{itemize}[<+->]
+							\item[\checkmark] Informar a los sujetos de la intencionalidad de la evaluación y sus aprendizajes.
+							\item[\checkmark] Dar a conocer los criterios de evaluación.
+							\item[\checkmark] Elaborar \textit{Pautas de Corrección}.
+							\item[\checkmark] Establecer la asignación de puntajes en relación con la relevancia y complejidad del aprendizaje.
+						\end{itemize}
+					\end{block}
+				}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\section{Evaluación Formativa}
+	
+	\begin{frame}{Evaluación Formativa}
+		\begin{alertblock}{}
+			En Canvas encontrará un test formativo con el cual podrá practicar su capacidad para identificar qué criterio de calidad está fallando.
+		\end{alertblock}
+	\end{frame}
+
+	\begin{frame}{Pregunta 1}
+		\begin{quote}
+		``Durante un curso se dio la situación de que el profesor dio bastante lectura para una prueba y en ella comenzó a preguntar datos demasiado específicos, palabras exactas citadas en los textos para identificar de qué autor podían ser y nombres y fechas, que si bien eran interesantes o importantes, para una evaluación de tantos contenidos eran muy específicos''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] \textbf<2->{Validez de contenido}
+			\item[B.] Validez instruccional
+			\item[C.] Validez consecuencial
+			\item[D.] Confiabilidad
+			\item[E.] Objetividad
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Pregunta 2}
+		\begin{quote}
+			 ``Las pruebas en un curso no correspondían a lo que el profesor enseñaba en clases, enseñaba mal, creaba un clima de terror en la sala y luego nos preguntaba cosas que no había enseñado o que había pasado en el curso del lado''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] \textbf<2->{Validez instruccional}
+			\item[B.] Validez de contenido
+			\item[C.] Validez consecuencial
+			\item[D.] Confiabilidad
+			\item[E.] Objetividad
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Pregunta 3}
+		\begin{quote}
+			 ``Hay veces en que tenemos que estudiar, por ejemplo un texto entero, y luego en la prueba aparecen un par de preguntas textuales y nada más… me parece negativo porque creo que es bueno aplicar lo que uno lee, además suelen pasar que justo nos preguntan lo que teníamos menos claro de todo y eso nos perjudica''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] Validez instruccional
+			\item[B.] Validez consecuencial
+			\item[C.] \textbf<2->{Validez de contenido}
+			\item[D.] Confiabilidad
+			\item[E.] Objetividad
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Pregunta 4}
+		\begin{quote}
+			 ``He tenido profesores que evalúan en sus pruebas cosas (contenidos) que han tratado mal, a la rápida o sencillamente no han tratado ni en clases ni en los textos referidos (asumiendo que los vimos en otros cursos). No me parece pedagógico evaluar contenidos de otros cursos''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] Confiabilidad
+			\item[B.] Objetividad
+			\item[C.] Validez consecuencial
+			\item[D.] \textbf<2->{Validez instruccional}
+			\item[E.] Validez de contenido
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Pregunta 5}
+		\begin{quote}
+			 ``Una evaluación oral, para mí es muy confuso dar a conocer lo que se sabe con tanta presión de por medio, los nervios juegan en contra en estos casos y siento que no representa una buena manera de evaluar ya que lo que preguntan se podría responder perfectamente en forma escrita y lo hacen más por no revisar''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] Validez de contenido
+			\item[B.] \textbf<2->{Validez consecuencial}
+			\item[C.] Validez instruccional
+			\item[D.] Confiabilidad
+			\item[E.] Objetividad
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Pregunta 6}
+		\begin{quote}
+			``Siempre que nos portábamos mal en la sala de clases el profesor, nos saca a interrogación a la pizarra. Se que no está bien lo que hacíamos en la sala, pero siento que la forma de castigo era extraña''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] Validez de contenido
+			\item[B.] Validez instruccional
+			\item[C.] Confiabilidad
+			\item[D.] \textbf<2->{Validez consecuencial}
+			\item[E.] Objetividad
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Pregunta 7}
+		\begin{quote}
+			`` “En un curso donde las pruebas eran una pregunta por cada tema y si justo no te sabías eso específico, perdías con esa pregunta, aunque te supieras el tema''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] Validez de contenido
+			\item[B.] \textbf<2->{Confiabilidad}
+			\item[C.] Validez instruccional
+			\item[D.] Validez consecuencial
+			\item[E.] Objetividad
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Pregunta 8}
+		\begin{quote}
+			``En las pruebas de alternativa que daba mi profesora cuando teníamos que escoger la alternativa correcta era muy sencillo porque siempre las otras alternativas eran mucho más cortas que la correcta''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] Validez instruccional
+			\item[B.] Validez consecuencial
+			\item[C.] Validez de contenido
+			\item[D.] \textbf<2->{Confiabilidad}
+			\item[E.] Objetividad
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Pregunta 9}
+		\begin{quote}
+			`` “En enseñanza media, todas las evaluaciones de historia se realizaban con cuestionarios, el problema radicaba en que las pruebas quedaban en poder del profesor y no se tenía derecho a corrección''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] Validez de contenido
+			\item[B.] \textbf<2->{Objetividad}
+			\item[C.] Validez instruccional
+			\item[D.] Validez consecuencial
+			\item[E.] Confiabilidad
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Pregunta 10}
+		\begin{quote}
+			``"Yo y mi compañero sacamos notas diferentes, el saco una nota más alta cuando y lo raro es que fue él quién me copió todas las respuestas''
+		\end{quote}
+		\begin{enumerate}	
+			\item[A.] Validez de contenido
+			\item[B.] Validez consecuencial
+			\item[C.] Confiabilidad
+			\item[D.] Validez instruccional
+			\item[E.] \textbf<2->{Objetividad}
+		\end{enumerate}
+	\end{frame}
+
+	\section{Bibliografía}
+	
+	\begin{frame}[allowframebreaks]{Bibliografía}
+		
+		\bibliography{clase_3}
+		
+	\end{frame}
+	
+
+
+\end{document}

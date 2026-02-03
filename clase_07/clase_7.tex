@@ -1,0 +1,195 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\usepackage{pgfplots}
+\usepackage[]{wasysym}
+\usepackage{tabularx} % para ajuste del tamaño de la tabla
+\usepackage{multirow} % juntar filas en una tabla
+
+\usepackage{../template/uandes169template}
+
+\begin{document}
+\author{Prof. Daniel Muñoz \\
+	\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+\title{Tabla de especificaciones}
+\subtitle{Clase 7}
+\date{23 de abril de 2025} %agregar el día de hoy
+%\subject{subject}
+%\setbeamercovered{transparent}
+%\setbeamertemplate{navigation symbols}{}
+\maketitle
+
+\section{Resumen}
+
+\begin{frame}{Resumen: Módulo 2}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\only<1>{\begin{block}{Taxonomía \cite{STATEU2021}}
+					Recurso pedagógica que orienta a los equipos tener un lenguaje único sin ambigüedades
+				\end{block}}
+			\only<2>{\begin{block}{Taxonomía de Bloom \cite{BLOOM1956} }
+					Primera taxonomía educativa originada por Benjamin Bloom (1913 - 1999), era una clasificación de habilidades (verbos) agrupadas en Dominios Cognitivos, del más elemental Conocimiento hasta la más compleja Evaluar.
+				\end{block}}
+			\only<3>{\begin{block}{Taxonomía Revisada de Anderson \cite{KRATWOHL2002} }
+					En esta taxonomía se hace una revisión de la taxonomía de Bloom, convirtiéndola de unidimensional a bidimensional.
+				\end{block}}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1>{
+				\begin{figure}
+					\includegraphics[width=.8\linewidth]{../imagenes/same_language}
+					\caption{Siempre es bueno tener una taxonomía que oriente lo que hacemos}
+				\end{figure}}
+			\only<2>{
+				\begin{block}{Taxonomía de Bloom}
+					\begin{enumerate}
+						\item Conocer
+						\item Comprender
+						\item Aplicar
+						\item Analizar
+						\item Sintetizar
+						\item Evaluar
+					\end{enumerate}
+				\end{block}}
+			\only<3>{
+				\begin{block}{Taxonomía de Anderson \& Kratwohl}
+					\begin{tikzpicture}[node distance= 2.2cm]
+						\node[rectangle, fill=gray!50] (org) {Original};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below of = org] (knowB) {Conocer};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below right of= knowB] (knowK) {Conocer};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below left of= knowB] (rem) {Recordar};
+						\node[rectangle, fill=gray!50, below right of = rem] (rev ){Revisada};
+						\draw[->,thick,>=stealth] (knowB)  -- node[anchor=west] {Conocimiento} (knowK);
+						\draw[->,thick,>=stealth] (knowB) -- node[anchor=east] {Proceso Cognitivo} (rem);
+					\end{tikzpicture}
+				\end{block}}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Objetivos de Aprendizaje (OA) e Indicadores de Evaluación (IE)}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{block}{OA}
+				Verbo + conocimiento
+				\begin{itemize}
+					\item Verbo en infinitivo.
+					\item Verbo no observable.
+				\end{itemize}
+			\end{block}
+			\begin{exampleblock}{Ejemplo}
+				\begin{itemize}
+					\item Conocer los tipos de evaluación según norma.
+					\item Comprender los tipos de evaluación.
+					\item Analizar la evaluación según validación y confiabilidad.
+				\end{itemize}
+			\end{exampleblock}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}{IE}
+				Verbo + contenido + Condición
+				\begin{itemize}
+					\item Verbo medible.
+					\item Verbo en indicativo presente y tercera persona singular o plural.
+					\item Verbo igual o inferior al OA
+					\item Contenido relacionado al OA.
+					\item Condición observable: oral, escrito, gestual, gráfica
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Cuidado con...}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{exampleblock}{Lea los siguientes IE.}
+				\begin{enumerate}
+					\item Comprende el funcionamiento del sistema digestivo mediante una maqueta.
+					\item Desempeña infraestructura tecnológica manualmente.
+					\item Los alumnos reconocen ser felices gestualmente.
+					\item Diferencia para reconocer una argumentación oral.
+				\end{enumerate}
+			\end{exampleblock}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}
+				\item<2-> En 1 no puedes ver un funcionamiento con una maqueta.
+				\item<3-> Desempeñar es \textit{Ejercer las obligaciones inherentes a una profesión, cargo u oficio.}\cite{RAE2021}
+				\item<4-> Nunca colocar \textit{los alumnos} ya que siempre esta dirigido a lo que ellos hacen, por tanto es tremendamente redundante.
+				\item<5-> Dos verbos
+			\end{itemize}
+
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Tabla de especificaciones}
+
+\begin{frame}{Tabla de especificaciones \cite{CASTILLO2010}}
+	Finalmente, los OA e IE deben ubicarse en una tabla de especificaciones. ¿Qué es una tabla de especificaciones (TE)?
+	\begin{center}
+		\visible<2>{
+				% Please add the following required packages to your document preamble:
+				% \usepackage{multirow}
+				\begin{table}[]
+					\begin{tabular}{|l|l|l|l|l|l|}
+						\hline
+						OA                   & C                  & IE  & H  & C  & N \\ \hline
+						\multirow{3}{*}{OA1} & \multirow{3}{*}{C} & IE1 & H1 & C1 & 5  \\ \cline{3-6}
+						                     &                    & IE2 & H2 & C2 & 3  \\ \cline{3-6}
+						                     &                    & IE3 & H3 & C3 & 1  \\ \hline
+					\end{tabular}
+				\end{table}
+		}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Analicemos algunos elementos}
+	\begin{block}{Observe que:}
+		\begin{itemize}
+			\item Llamaremos habilidad al proceso cognitivo del IE.
+			\item Los IE de evaluación están ordenados de la habilidad más simple a la más compleja.
+			\item El último indicador es exactamente igual al OA en habilidad y contenido (temática y tipo).
+			\item Los indicadores logran \textbf{tributar} a la totalidad del OA y juntos forman una \textbf{unidad de sentido}.
+		\end{itemize}
+	\end{block}
+	\begin{block}{Clasificación}
+		\begin{tabularx}{\linewidth}{|X|X|}
+			\hline
+			Reconocer, Comprender, Aplicar & Bajo nivel cognitivo \\
+			\hline
+			Analizar, Evaluar, Crear       & Alto nivel cognitivo \\
+			\hline
+		\end{tabularx}
+	\end{block}
+\end{frame}
+
+\section{Bibliografía}
+
+\begin{frame}[allowframebreaks]{Bibliografía}
+
+	\bibliography{../bibliografia}
+
+\end{frame}
+
+{
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}
+	\makebox[\linewidth]{\includegraphics[width=\paperwidth]{../template/background-last-page}}
+\end{frame}
+}
+
+\end{document}

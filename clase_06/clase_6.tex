@@ -1,0 +1,365 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\usepackage{pgfplots}
+\usepackage[]{wasysym}
+
+\usepackage{../template/uandes169template}
+
+\begin{document}
+\author{Prof. Daniel Muñoz \\
+	\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+\title{Construcción de Objetivos e indicadores}
+\subtitle{Clase 6}
+\date{16 de abril de 2025} %agregar el día de hoy
+%\subject{subject}
+%\setbeamercovered{transparent}
+%\setbeamertemplate{navigation symbols}{}
+
+\maketitle
+
+\section{Resultados del proceso}
+
+\begin{frame}{Análisis de resultados: Edumétrico}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{block}{Objetivos Módulo 1}
+				\begin{enumerate}
+					\justifying
+					\item Comprender la teoría e historia de la evaluación de aprendizajes
+					\item Entender que la evaluación es un proceso técnico, pero por sobre todo una actividad ética.
+					\item Aplicar la teoría evaluativa en contextos a partir de testimonios reales o simulados.
+				\end{enumerate}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1>{
+				\begin{tikzpicture}
+					\begin{axis}[width=\linewidth,
+							symbolic x coords={EF1, EF2, ES1},
+							xtick=data, ylabel=Participación, bar width=20, ymin=0, ymax=100
+						]
+						\addplot[ybar,fill=blue] coordinates {
+								(EF1,   45)
+								(EF2,   42)
+								(ES1,   98)
+							};
+						\addplot[red, line legend, sharp plot, nodes near coords={}, update limits=false,shorten >=-3mm,shorten <=-3mm]
+						coordinates {(EF1, 60) (ES1, 60)}
+						node[midway,below]{participación 60\%};
+						]
+					\end{axis}
+				\end{tikzpicture}}
+			\only<2>{
+				\begin{tikzpicture}
+					\begin{axis}[width=\linewidth,
+							symbolic x coords={OA1, OA2, OA3},
+							xtick=data, ylabel=Porcentaje de logro, bar width=20, ymin=0, ymax=100
+						]
+						\addplot[ybar,fill=blue] coordinates {
+								(OA1,   61)
+								(OA2,   66)
+								(OA3,   63)
+							};
+						\addplot[red,line legend,sharp plot,nodes near coords={},
+							update limits=false,shorten >=-3mm,shorten <=-3mm]
+						coordinates {(OA1,60) (OA3,60)}
+						node[midway,below]{exigencia 60\%};
+					\end{axis}
+				\end{tikzpicture}}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Resumen}
+
+\begin{frame}{Resumen: Módulo 2}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\only<1>{\begin{block}{Taxonomía \cite{STATEU2021}}
+					Recurso pedagógica que orienta a los equipos tener un lenguaje único sin ambigüedades
+				\end{block}}
+			\only<2>{\begin{block}{Taxonomía de Bloom \cite{BLOOM1956} }
+					Primera taxonomía educativa originada por Benjamin Bloom (1913 - 1999), era una clasificación de habilidades (verbos) agrupadas en Dominios Cognitivos, del más elemental Conocimiento hasta la más compleja Evaluar.
+				\end{block}}
+			\only<3>{\begin{block}{Taxonomía Revisada de Anderson \cite{KRATWOHL2002} }
+					En esta taxonomía se hace una revisión de la taxonomía de Bloom, convirtiéndola de unidimensional a bidimensional.
+				\end{block}}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1>{
+				\begin{figure}
+					\includegraphics[width=.8\linewidth]{../imagenes/same_language}
+					\caption{Siempre es bueno tener una taxonomía que oriente lo que hacemos}
+				\end{figure}}
+			\only<2>{
+				\begin{block}{Taxonomía de Bloom}
+					\begin{enumerate}
+						\item Conocer
+						\item Comprender
+						\item Aplicar
+						\item Analizar
+						\item Sintetizar
+						\item Evaluar
+					\end{enumerate}
+				\end{block}}
+			\only<3>{
+				\begin{block}{Taxonomía de Anderson \& Kratwohl}
+					\begin{tikzpicture}[node distance= 2.2cm]
+						\node[rectangle, fill=gray!50] (org) {Original};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below of = org] (knowB) {Conocer};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below right of= knowB] (knowK) {Conocer};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below left of= knowB] (rem) {Recordar};
+						\node[rectangle, fill=gray!50, below right of = rem] (rev ){Revisada};
+						\draw[->,thick,>=stealth] (knowB)  -- node[anchor=west] {Conocimiento} (knowK);
+						\draw[->,thick,>=stealth] (knowB) -- node[anchor=east] {Proceso Cognitivo} (rem);
+					\end{tikzpicture}
+				\end{block}}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Origenes}
+
+\begin{frame}{Orígenes de la idea de Objetivos de Aprendizaje}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\only<1>{\begin{block}{Segunda generación}
+					Los orígenes de la idea de plantear objetivos en la evaluación viene de nuestro Ralph Tylor.
+				\end{block}}
+			\only<2-5>{\begin{block}{Objetivos, objetivos}
+					\begin{itemize}
+						\justifying
+						\item<2-> En un principio un \textit{objetivo} eran exactamente los mismos en un proyecto cualquiera que en educación.
+						\item<3-> Es por ello que usted encontrará la literatura (menos actualizada) algunas estrategias que exigen la observabilidad del objetivo.
+						\item<5-> Actualmente para diferenciar los objetivos en educación de cualquier otro, lo complementamos con la palabra \textit{aprendizaje}.
+					\end{itemize}
+				\end{block}}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1-2>{
+				\begin{figure}
+					\includegraphics<1>[width=.6\linewidth]{../imagenes/tyler}
+					\includegraphics<2>[width=.7\linewidth]{../imagenes/two_same}
+					\caption{
+						\only<1>{Ralph Tyler padre de la evaluación educativa}
+						\only<2>{``Resistirse al entrenamiento no es lo mismo que el entrenamiento de resistencia''}
+					}
+				\end{figure}}
+			\only<3>{
+				\begin{block}{SMART \cite{STC2010}}
+					\begin{itemize}
+						\item \textbf{S}pecific: Sin dobles lecturas.
+						\item \textbf{M}easurable: Medible.
+						\item \textbf{A}chieved: realista y alcanzable.
+						\item \textbf{R}elevant: relevante.
+						\item \textbf{T}ime Bound: En un plazo.
+					\end{itemize}
+				\end{block}}
+			\only<4>{
+				\begin{block}{Pautas de Mager [2002]\nocite{EDUTEKA2002}}
+					\begin{itemize}
+						\item Audiencia: ¿Quién?
+						\item Conducta: ¿Qué?
+						\item Condición: ¿Cómo?
+						\item Rango: ¿Cuánto?
+					\end{itemize}
+				\end{block}
+			}
+			\only<5>{
+				\begin{block}{Entonces...}
+					Un objetivo de \textit{aprendizaje} dependerá de lo que entendemos como \textit{aprendizaje}. ¿Qué es el aprendizaje?
+				\end{block}
+			}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{¿qué es el aprendizaje?}
+
+\begin{frame}{¿Qué es el aprendizaje? \cite{SMITH2021}}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			Dependerá de qué teoría del aprendizaje nos posicionemos:
+			\begin{block}<1->{Conductismo \only<6->{[Observable]}}
+				Cambio en el comportamiento.
+			\end{block}
+			\begin{block}<2->{Humanismo \only<6->{[No observable]}}
+				Un acto personal para alcanzar un potencial.
+			\end{block}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}<3->{Teoría socio-cognitiva \only<6->{[No observable]}}
+				Interacción con los demás en un contexto social
+			\end{block}
+			\begin{block}<4->{Cognitivismo \only<6->{[No observable]}}
+				Proceso mental interno.
+			\end{block}
+			\begin{block}<5->{Constructivismo \only<6->{[No observable]}}
+				Crear significado a partir de la experiencia
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Construcción de Objetivos de Aprendizaje}
+
+\begin{frame}{Construcción de Objetivos de Aprendizaje}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{block}<1->{Objetivo de Aprendizaje}
+				Es usado para especificar un resultado anticipado que será logrado por un estudiante.
+			\end{block}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}<2->{Fórmula}
+				OA = {\color{red}Verbo en infinitivo} + {\color{blue}conocimiento}
+			\end{block}
+			\begin{exampleblock}<3->{Ejemplos}
+				\begin{itemize}
+					\item[OA1]<3-> {\color{red}Conocer} las {\color{blue}leyes de la termodinámica.}
+					\item[OA2]<4-> {\color{red}Crear} una {\color{blue}planificación de estudios}.
+					\item[OA3]<5-> {\color{red}Evaluar} una {\color{blue}noticia de actualidad}.
+					\item[OA4]<6-> {\color{red}Reconocer} los diferentes {\color{blue}tipos de evaluación según agente}.
+				\end{itemize}
+			\end{exampleblock}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Indicadores de evaluación}
+
+\begin{frame}{Indicadores de evaluación}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}[<+->]
+				\justifying
+				\item Pero si los aprendizajes no son observables: ¿Cómo podemos saber si se logra o no?
+				\item R: No podemos. Por tanto lo único que podemos hacer es \textit{inferir} su logro.
+				\item Para ello supondremos que se cumplen sí sé logran ciertos criterios.
+				\item Estos \textit{criterios de logro} deben ser observables.
+			\end{itemize}
+			\begin{block}<5->{Fórmula}
+				IE = {\color{red}Verbo en modo indicativo} + {\color{cyan}conocimiento} + {\color{blue}condición}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}<6->{OA4}
+				{\color{red}Reconocer} los diferentes {\color{blue}tipos de evaluación según agente}.
+				\begin{enumerate}
+					\item<7-> {\color{red}Señalan} el {\color{cyan}tipo de evaluación según agente} {\color{blue}a partir relatos escritos}.
+					\item<8-> {\color{red}Señalan} {\color{blue}un relato que describe} el {\color{cyan}tipo de evaluación según agente}.
+					\item<9-> {\color{red}Definen} {\color{blue}por escrito} los {\color{cyan}tipos de evaluación según agente}.
+					\item<10-> {\color{red}Listan} {\color{blue}por escrito} los {\color{cyan}tipos de evaluación según agente}.
+				\end{enumerate}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Síntesis \cite{WESTED2021}}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}[<+->]
+				\item Los OA no son observables, los IE si.
+				\item Los IE tributan a un OA. Por tanto muchos IE para un OA. y no al revés.
+				\item En los OA utilizaremos verbos no observables: reconocer, comprender, aplicar, analizar, evaluar y crear.
+				\item Por otro lado, los IE si deben ser observables, por tanto tendrán verbos como: explican, describen, dibujan, escriben, justifican, etc.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}<5->{Considere que:}
+				\begin{itemize}
+					\justifying
+					\item Ningún IE debe superar al OA desde los PC.
+					\item Los OA se diferencian en bajo (Reconocer, comprender y aplicar) y alto nivel cognitivo (analizar, evaluar a crear)
+					\item Los IE deben recorrer desde el PC:Reconocer al PC:OA. Siempre y cuando no existan otros OA que cubran esa necesidad.
+					\item Cada OA debe contener a lo menos tres IE.
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Instrumentos de orientación: Listas de cotejo}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{block}{El OA posee:}
+				\begin{itemize}[<+->]
+					\item[\Square] Un verbo no observable.
+					\item[\Square] Un verbo en infinitivo.
+					\item[\Square] Un conocimiento.
+					\item[\Square] A lo menos tres IE.
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}<5->{El IE posee:}
+				\begin{itemize}
+					\item[\Square]<6-> Un verbo en modo indicativo.
+					\item[\Square]<7-> Un verbo observable.
+					\item[\Square]<8-> Una condición.
+					\item[\Square]<9-> Un conocimiento igual o relacionado al OA.
+					\item[\Square]<10-> Un verbo inferior o igual al OA.
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Tarea formativa}
+	\justifying
+	Como grupo busque seis objetivos de aprendizaje que desee usar para crear preguntas a partir de él. Estos objetivos pueden ser de: Syllabus de cursos que tengo o haya tenido, del currículum nacional o de cualquier otra fuente que disponga. Una vez los tenga seleccionados los discutiremos y trabajaremos la siguiente clase.
+\end{frame}
+
+%	\begin{frame}{Tarea formativa/sumativa}
+%		\justifying
+%		Ahora con lo aprendido, cree tres objetivos de aprendizaje (OA1, OA2, OA3) a partir de los Objetivos de Aprendizaje que seleccionó previamente cada uno con tres indicadores  de evaluación (1.1, 1.2, 1.3, 2.1, 2.2, 2.3, 3.1, 3.2, 3.3). Además los OA deben tributar a la siguiente tabla taxonómica:
+%
+%		\begin{center}
+%		\rowcolors[]{1}{blue!20}{blue!10}
+%		\begin{tabular}{|l|c|c|c|c|c|c|}
+%			\hline
+%			& Reconocer & Comprender & Aplicar & Analizar & Evaluar & Crear \\
+%			\hline
+%			Factual &  &  &  &  &  &  \\
+%			\hline
+%			Conceptual & OA1 &  &  & OA3 &  &  \\
+%			\hline
+%			Procedimental &  &  & OA2 &  &  &  \\
+%			\hline
+%			Metacognitivo &  &  &  &  &  &  \\
+%			\hline
+%		\end{tabular}
+%		\end{center}
+%	\end{frame}
+
+\section{Bibliografía}
+
+\begin{frame}[allowframebreaks]{Bibliografía}
+
+	\bibliography{../bibliografia}
+
+\end{frame}
+
+{
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}
+	\makebox[\linewidth]{\includegraphics[width=\paperwidth]{../template/background-last-page}}
+\end{frame}
+}
+
+
+\end{document}

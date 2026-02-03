@@ -1,0 +1,294 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage[]{wasysym}
+\usepackage{tabularx} % para ajuste del tamaño de la tabla
+\usepackage{multirow} % juntar filas en una tabla w
+\usepackage{chemfig}
+\usepackage{chemmacros}
+
+\newcommand\encircle[1]{% Poder crear letras dentro de círculos
+	\tikz[baseline=(X.base)]
+	\node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+
+\usepackage{../template/uandes169template}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INICIO DEL CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\author{Prof. Daniel Muñoz \\
+	\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+\title{Retroalimentación efectiva}
+\subtitle{Clase 13}
+\date{28 de mayo}
+\maketitle
+
+\section{Informa Prueba 2}
+
+\begin{frame}[allowdisplaybreaks]
+	\frametitle{Informe Prueba 2}
+	\begin{itemize}
+		\item[OA1.] (89\%) Crear objetivos de aprendizaje coherentes con la taxonomía de Anderson y Krathwohl.
+		\item[OA2.] (90\%) Crear indicadores de evaluación a partir de objetivos de aprendizaje utilizando la taxonomía de Anderson y Krathwohl.
+		\item[OA3.] (91\%) Aplicar la tabla de especificaciones para planificar la evaluación.
+	\end{itemize}
+\end{frame}
+
+\section{Evaluación Formativa}
+
+\begin{frame}{La evaluación formativa}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}[<+->]
+				\item Recuerde el ciclo de la evaluación
+				\item La evaluación formativa también conocida como \textit{evaluación como aprendizaje}.
+				\item Pero no sirve de nada si no genera aprendizajes, entonces...
+				\item Para eso nos basaremos en el trabajo de Margaret Heritage
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{figure}
+				\includegraphics<1>[width=.8\linewidth]{../imagenes/assesment_process}
+				\includegraphics<2>[width=.8\linewidth]{../imagenes/gold_coin}
+				\includegraphics<3>[width=.8\linewidth]{../imagenes/question}
+				\includegraphics<4>[width=.8\linewidth]{../imagenes/heritage}
+				\caption{
+					\only<1>{El ciclo de la evaluación}
+					\only<2>{Es la moneda de oro de la evaluación}
+					\only<3>{¿Cómo generamos aprendizajes?}
+					\only<4>{Margaret Heritage, profesora inglesa experta en evaluación formativa}
+				}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{El ciclo de la evaluación formativa. \cite{AC2010}}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}
+				\item<1-> El ciclo de la evaluación formativa.
+				\item<2-> Consiste de tres etapas:
+				      \begin{enumerate}
+					      \item<3-> ¿Hacia donde voy?
+					      \item<4-> ¿Dónde estoy?
+					      \item<5-> ¿Cómo sigo?
+				      \end{enumerate}
+				\item<6-> En esto la \textit{retroalimentación} es fundamental ya que nos permite superar esa \textit{brecha}.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1-2>{\includegraphics[width=\linewidth]{../imagenes/ciclo_formative}}
+			\only<3>{Los objetivos de aprendizaje, criterios de logro deben ser de explicito conocimiento y entendimiento. El estudiante debe saber \textit{Para qué vino a clases}}\\
+			\only<4>{El estudiante debe saber cual es su nivel, dónde está en al ruta del aprendizaje, para eso evaluamos y le señalamos exactamente cómo está el aprendizaje logrado hasta ahora  y ...}
+			\only<5>{Cómo mejorar para llegar al destino}
+			\only<6>{
+				\begin{tikzpicture}[node distance= 3cm]
+					\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black] (zda) {Estado actual};
+					\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below of = zda] (zdp) {Aprendizaje};
+					\draw[|-|,thick,>=stealth] ([xshift = 2cm] zda.south)  -- node[anchor=west] {Brecha} ([xshift = 2cm] zdp.north);
+					\draw[>-<,thick,>=stealth] (zda) -- node[anchor=east] {Retroalimentación} (zdp);
+				\end{tikzpicture}}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{La retroalimentación efectiva}
+
+\begin{frame}{La retroalimentación efectiva}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}[<+->]
+				\item Primero que todo, ¿vale la pena retroalimentar?
+				\item ¿En qué consiste una retroalimentación?
+				\item Una correcta retroalimentación debe responder a criterios de calidad.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{figure}
+				\includegraphics<1>[width=\linewidth]{../imagenes/feedback_hattie}
+				\only<2>{
+					\begin{columns}
+						\begin{column}{.3\linewidth}
+							\begin{block}{}
+								\flushright
+								Lo que el estudiante hizo bien
+							\end{block}
+						\end{column}
+						\begin{column}{.3\linewidth}
+							\centering +
+						\end{column}
+						\begin{column}{.3\linewidth}
+							\begin{block}{}
+								\flushleft Como mejorar
+							\end{block}
+						\end{column}
+					\end{columns}
+				}
+				\only<1>{\caption{``Hattie Rank''  \cite{HATTIE2017}} }
+				\only<2>{\caption{Estructura de una \textit{retroalimentación efectiva}}}
+			\end{figure}
+			\only<3->{
+				Una \textit{retroalimentación efectiva} debe:
+				\begin{itemize}
+					\item<4-> estar relacionada con la meta.
+					\item<5-> entregar pistas, \textbf{no soluciones}.
+					\item<6-> captar el razonamiento del estudiante.
+					\item<7-> ser usada por el estudiante.
+					\item<8-> enfocarse en el aprendizaje y \textbf{no} el individuo.
+				\end{itemize}
+			}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Otros modelos de retroalimentación}
+
+\begin{frame}[shrink, squeeze]
+	\frametitle{Modelo de tres niveles \cite{hattie07}}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\scriptsize
+			El modelo de Hattie y Timperley (2007) es idéntico al de Heritage, pero ellos distinguen tres niveles de feedback:
+
+			\begin{itemize}[<+->]
+				\scriptsize
+				\justifying
+				\item Nivel 1. Tarea. En este nivel usted retroalimenta las tareas del estudiante. Aquí usted se centra en el ``qué''
+				\item Nivel 2. Proceso. En este nivel usted retroalimenta el proceso del estudiante. Aquí usted se centra en el ``cómo''
+				\item Nivel 3. Autoregulación. En este nivel usted retroalimenta la capacidad del estudiante para monitorearse. Aquí usted desarrolla la metacognición del estudiante.
+				\item Nivel 4. Yo. Este nivel es cuando se retrolalimenta a la persona, pero al igual que Heritage, es la retroalimentación menos efectiva y se recomienda no usarla.
+			\end{itemize}
+		\end{column}
+
+		\begin{column}{.5\textwidth}
+			\only<1>{
+				\begin{itemize}
+					\item ``Esta suma está bien calculada.''
+
+					\item ``Aquí hay un error de ortografía en la palabra 'conciencia'.''
+
+					\item ``Te falta desarrollar más el segundo punto de tu ensayo.''
+
+					\item ``Tu gráfico es claro, pero los ejes no están etiquetados correctamente.''
+
+				\end{itemize}
+			}
+			\only<2>{
+				\begin{itemize}
+					\item ``La forma en que organizaste tus ideas en este esquema te ayudó a estructurar bien el ensayo.''
+
+					\item ``Necesitas revisar los pasos de la división antes de hacer la multiplicación.''
+
+					\item ``Intenta utilizar un organizador gráfico para comparar y contrastar las ideas antes de escribir.''
+
+					\item ``¿Qué hiciste para investigar la información? Considera usar fuentes académicas para tus próximas búsquedas.''
+				\end{itemize}
+			}
+			\only<3>{
+				\begin{itemize}
+					\small
+					\item ``¿Qué aprendiste de los errores que cometiste en esta tarea? ¿Cómo aplicarás eso en la siguiente?''
+
+					\item ``Antes de entregar, ¿cómo revisaste tu trabajo para asegurarte de que cumplía con todos los criterios?''
+
+					\item ``¿Qué pasos tomaste cuando te sentiste atascado en este problema? ¿Podrías intentar una estrategia diferente si vuelve a ocurrir?''
+
+					\item ``Me doy cuenta de que has hecho un buen trabajo al planificar tus tiempos. ¿Cómo te ayudó eso a completar la tarea a tiempo?''
+				\end{itemize}
+			}
+			\only<4>{
+				\begin{itemize}
+					\item ``¡Eres un genio!''
+
+					\item ``Qué bueno, hiciste un trabajo excelente.''
+
+					\item ``Siempre eres tan creativo.''
+				\end{itemize}
+			}
+		\end{column}
+	\end{columns}
+
+\end{frame}
+
+\begin{frame}[allowdisplaybreaks]
+	\frametitle{Criterios de buena retroalimentación \cite{susan20}}
+	Susan Brookhart (2020) menciona los mismo elemento de una retroalimentación efectiva que vimos en Hattie y Heritage, pero ella hace enfásis en que la calidad de esta está dada por:
+	\begin{itemize}
+		\small
+		\justifying
+		\item Específica y descriptiva: No debe ser sólo evaluativa (ej. “bien”, “excelente”), sino señalar qué hizo bien el estudiante o qué necesita mejorar.
+		\item Relacionada con criterios explícitos: Debe estar anclada a los objetivos de aprendizaje, no ser vaga o solo basada en intuición.
+		\item Procesable (accionable): El estudiante debe saber qué hacer a continuación. Si no puede usarla, no sirve.
+		\item Oportuna: La retroalimentación debe darse lo suficientemente pronto como para influir en el desempeño.
+		\item Equilibrada (constructiva y motivadora): Debe combinar reconocimiento del logro con orientación para mejorar.
+		\item Usar lenguaje comprensible: Evitar jerga, tecnicismos o generalidades. El foco está en la claridad.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{Evaluación ``para'' el aprendizaje \cite{william08}}
+
+Para Wiliam, la retroalimentación es solo una parte de un ecosistema pedagógico más amplio llamado ``Evaluación para el Aprendizaje'', centrado en la activación del aprendizaje durante el proceso (no al final).
+
+\begin{itemize}
+\item Clarificar, compartir y entender los objetivos de aprendizaje y criterios de éxito.
+\item Diseñar actividades que generen evidencia del aprendizaje.
+\item Proporcionar \textbf{retroalimentación} que impulse el aprendizaje.
+\item Activar a los estudiantes como recursos de aprendizaje entre ellos [\textbf{andamiaje}].
+\item Activar a los estudiantes como agentes de su propio aprendizaje [\textbf{metacognición}].
+
+\end{itemize}
+
+Algunas observaciones de William y col.
+\begin{itemize}
+
+\item La retroalimentación no es efectiva por sí sola: su efectividad depende de cómo el estudiante la recibe y usa.
+
+\item Una retroalimentación puede ser perfectamente formulada y, sin embargo, tener cero impacto si el estudiante no la comprende o no la usa.
+
+\item Critica la “retroalimentación correctiva” que no involucra al estudiante.
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejercicio en clase}
+	Usted se encuentra trabajando con sus estudiantes el modelo de \textit{explicación científica óntico} (mecanicista) junto con el contenido: \textit{estrategias evolutivas de supervivencia}. Como contexto tiene la siguiente observación:
+	\begin{itemize}[<+->]
+		\item Profesor: ``Explique por qué, en general, los roedores tienen muchas crías''
+		\item Estudiante:  ``Porque se aparean mucho profesor''
+	\end{itemize}
+	\visible<3->{¿Qué le diría al estudiante como retroalimentación? Siga los criterios de calidad y la estructura de una retroalimentación. }
+
+\end{frame}
+
+\section{Bibliografía}
+
+\begin{frame}[allowframebreaks]{Bibliografía}
+
+	\bibliography{../bibliografia}
+
+\end{frame}
+
+{
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}
+	\makebox[\linewidth]{\includegraphics[width=\paperwidth]{../template/background-last-page}}
+\end{frame}
+}
+
+
+\end{document}

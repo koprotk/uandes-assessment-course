@@ -1,0 +1,30 @@
+#+title: Evaluación
+#+subtitle: Clase 1: Bienvenida
+#+author: Prof. Daniel Muñoz \newline ={{{keyword(email)}}}=
+#+email: dmunoz@miuandes.cl
+#+date: \today
+#+description:
+#+keywords:
+#+language: es
+#+latex_header: \usepackage{template}
+#+latex_header_extra: \usepackage[spanish]{babel}
+#+latex_engraved_theme:
+#+latex_compiler: pdflatex
+#+startup: beamer
+#+latex_class: beamer
+#+latex_class_options: [aspectratio=169]
+#+options: h:2
+
+* Bienvenida
+** Advertencia
+
+This slide consists of some text with a number of bullet points:
+- {{{keyword(author)}}}, {{{keyword(email)}}}
+- the first, very @important@, point!
+- the previous point shows the use of the special markup which
+  translates to the Beamer specific /alert/ command for highlighting
+  text.
+
+
+The above list could be numbered or any other type of list and may
+include sub-lists

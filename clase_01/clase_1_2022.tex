@@ -1,0 +1,538 @@
+\documentclass[11pt, aspectratio=169, xcolor=table]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{Cuerna}
+\usecolortheme{bluesimplex}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\begin{document}
+  \author{Prof. Daniel Muñoz \\
+    \texttt{dmunoz@miuandes.cl}
+    }
+  \title{Evaluación}
+  \logo{
+    \includegraphics[width=1.8cm]{../marca_principal.png}
+    }
+  \institute{Facultad de Educación, Universidad de los Andes}
+  \date{\today{}}
+
+  \begin{frame}[plain]
+    \setbeamertemplate{logo}{}
+    \maketitle
+  \end{frame}
+
+  \section{Bienvenida}
+
+    \begin{frame}{Advertencia}
+      \begin{columns}
+		\begin{column}{.5\textwidth}
+	  		\begin{block}{}
+	    		\begin{itemize}[<+->]
+					\item El presente curso tiene por objeto de estudio \textit{Evaluación Educativa}
+					\item Otros objetos de estudio como: \textit{Evaluación de proyectos} y \textit{Evaluación de políticas públicas}.
+					\item No forman parte de este curso.
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\linewidth]{../imagenes/warning}
+		\end{column}
+      \end{columns}
+    \end{frame}
+
+	\begin{frame}{Acerca del Profesor}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{}
+					\begin{itemize}[<+->]
+						\small
+						\item Daniel E. Muñoz Masson, \textit{dmunoz@miuandes.cl}
+						\item Profesor de Química. UChile
+						\item Mg. en educación c/m Evaluación de Aprendizajes. PUC
+						\item Mg. en Ciencias c/m Química. UChile
+						\item Analista en Data Science con Python. Corfo
+						\item Analista QA en automatización de pruebas. Corfo
+						\item Experiencia como: Evaluador, Jefe de Proyecto, Analista de proyecto, Profesor, Docente e Investigador
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\begin{figure}
+					\includegraphics[width=0.8\linewidth]{../imagenes/yo}
+					\caption{\textit{Le Fils de l'Homme} 1964. René Magritte}
+				\end{figure}
+				
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Acerca del Curso}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{}
+					\begin{itemize}[<+->]
+						\item El curso es teórico-práctico.
+						\item Horario: Viernes 10.30 a 12.20
+						\item Fechas claves:
+						\begin{itemize}
+							\item Inicio: 11-MAR
+							\item Fin: 08-JUN
+						\end{itemize}
+						\item Requisitos de Aprobación
+						\begin{itemize}
+							\item Promedio general igual o superior a 4.0
+							\item Asistencia igual o superior al 60\%
+							\item Calificación en el examen igual o superior a 3.0.
+							\item Calificación igual o superior a 3.0 para presentarse a examen.
+						\end{itemize}
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics[width=\linewidth]{../imagenes/cubos}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Evaluaciones Sumativas}
+		\begin{columns}
+			\begin{column}{0.2\linewidth}
+				\begin{block}{Eval 1: 10\%}
+					\begin{itemize}
+						\item Selec. Múltiple
+						\item 1 de Abril
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.2\linewidth}
+				\begin{block}{Eval 2: 25\%}
+					\begin{itemize}
+						\item Trabajo individual
+						\item 22 de Abril
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.2\linewidth}
+				\begin{block}{Eval 3: 25\%}
+					\begin{itemize}
+						\item Trabajo individual
+						\item 27 de Mayo
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.2\linewidth}
+				\begin{block}{Eval 4. 10\%}
+					\begin{itemize}
+						\item Trabajo \textit{grupal}
+						\item 10 de Junio
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.2\linewidth}
+				\begin{block}{Examen. 30\%}
+					\begin{itemize}
+						\item Present. $\geqslant 3.0$
+						\item Final $\geqslant 3.0$
+					\end{itemize}
+				\end{block}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Bibliografía de consulta}
+		\begin{thebibliography}{Sanmartí, 2007}
+			\setbeamertemplate{bibliography item}[book] %Para especificar que los siguientes bibitem son book
+			\bibitem[Anijovich, 2017]{Anijovich2017}
+			Anijovich, A. y Cappelletti, G.
+				\newblock {\em La Evaluación como oportunidad}
+				\newblock Paidos, 2017.
+			
+			\bibitem[Castillo, 2009]{Castillo2009}
+			Castillo, S. y Cabrerizo, J.
+				\newblock {\em Evaluación Educativa de aprendizajes y competencias}
+				\newblock Pearson Education, 2009
+			
+			\bibitem[Sanmartí, 2007]{Sanmarti2007}
+			Sanmartí, N.
+				\newblock {\em 10 ideas claves: Evaluar para Aprender}
+				\newblock Graó, 2007.
+			
+		\end{thebibliography}
+	\end{frame}
+
+	\begin{frame}{Unidades temáticas}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{}
+					\begin{enumerate}[<+->]
+						\item Historia y conceptos de la evaluación educativa
+						\item Planificación de la evaluación
+						\item Construcción de reactivos e instrumentos
+						\item Retroalimentación, cuestionarios y pruebas diagnósticas.
+					\end{enumerate}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\centering
+				\begin{tikzpicture}
+					\def \n {4}
+					\def \radius {2.5cm}
+					\def \margin {8} % margin in angles, depends on the radius
+					
+					\foreach \s in {1,...,\n}
+					{
+						\node[draw, circle] at ({360/\n * (\s - 1)}:\radius) {$\s$};
+						\draw[->, >=latex] ({360/\n * (\s - 1)+\margin}:\radius) 
+						arc ({360/\n * (\s - 1)+\margin}:{360/\n * (\s)-\margin}:\radius);
+					}
+				\end{tikzpicture}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\section{Dinámica de curso: Presentación}
+	
+	\begin{frame}{Lo más importante \dots ¡Usted!}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{Favor Presentarse y considerar:}
+					\begin{itemize}
+						\item Nombre.
+						\item Unidad académica
+						\item Interés en el minor (y si existe, de esta asignatura)
+						\item Breve comentario de su experiencia con la evaluación. (universidad, colegio, otros)
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\centering
+				\includegraphics[width=0.7\linewidth]{../imagenes/uncle_sam}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Encuesta}
+		\begin{block}{¿Qué es la evaluación?}
+			Es un:
+			\begin{enumerate}
+				\item[A.] proceso donde juzgamos un objeto.
+				\item[B.] proceso donde valoramos un objeto.
+				\item[C.] momento donde juzgamos un objeto.
+				\item[D.] momento donde valoramos un objeto.
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\section{Historia de la Evaluación Educativa}
+	
+	\begin{frame}{Historia. 2000 ac – 1930. Época pretayleriana o técnica}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{}
+					\begin{itemize}[<+->]
+						\scriptsize
+						\item Selección de funcionarios en China (II a.c), mediante evaluación oral.
+						\item Sócrates aplicaba cuestionarios para la selección de discípulos (V a.c)
+						\item Sistema de evaluación educativa dogmáticos (V – XV d.c.)
+						\item 1845. EEUU aplica test de rendimiento a estudiantes
+						\item 1887-1898 Joseph Rice utiliza un grupo control en sus evaluación de programas públicos.
+						\item 1916. Primeros test de inteligencia.
+						\item Éste período esta centrado en la aplicación de test y comparación experimentales.
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics[width=\linewidth]{../imagenes/mayeutica}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Historia. 2000 ac – 1930. Época pretayleriana o técnica}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{}
+					\begin{itemize}[<+->]
+						\scriptsize
+						\item \textit{\dots sitúan en el desarrollo de la sociedad industrial, el origen de los mecanismos de acreditación y selección de estudiantes, en función de sus conocimientos. Éste ha permanecido prácticamente inmutable desde entonces hasta hoy}.
+						\item \textit{\dots medición y evaluación resultaban términos intercambiables. Sin embargo, en la práctica sólo se hablaba de medición}.
+						\item \textit{El punto más alto del testing se sitúa en la década entre 1920 y 1930}.
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics[width=\linewidth]{../imagenes/iq_scale}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{quote}
+				Los tests informaban algo sobre el alumnado, pero nada de los programas de formación […]esta primera generación (referida a la de los testing) permanece todavía viva.
+			\end{quote}
+			\begin{flushright}
+				Alcaraz, N. (2017)
+			\end{flushright}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Historia. 1930 – 1957. Período tyleriano}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{}
+					\begin{itemize}[<+->]
+						\item Ralph Tyler (1969), padre de la evaluación educativa.
+						\item Los principales aportes de Tyler fueron:
+						\begin{itemize}
+							\item Separar evaluación de medición.
+							\item Formulación de objetivos.
+							\item Comprobación de su logro.
+							\item Aparición del criterio.
+						\end{itemize}
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\centering
+				\begin{figure}
+					\includegraphics[width=.5\linewidth]{../imagenes/tyler}
+					\caption{Ralph Tyler (1902-1994). Profesor EEUU que logró conceptualizar la evaluación educativa}
+				\end{figure}
+				
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{quote}
+				Las evaluaciones siguen respondiendo a las generaciones de la descripción y de la medición. Se recopilaba información, se describían las actuaciones públicas, y se medían sus resultados, pero no se ofrecían recomendaciones para la mejora de los programas.
+			\end{quote}
+		\end{block}
+		\begin{flushright}
+			Vélez, 2007 como se citó en \cite{ALCARAZ2015}
+		\end{flushright}
+	\end{frame}
+
+	\begin{frame}{Historia. 1957 – 1972. Época del realismo}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{}
+					\begin{itemize}[<+->]
+						\item En plena Guerra Fría la rendición de cuentas - accountability toma relevancia.
+						\item La evaluación de programas con gasto fiscal toma relevancia.
+						\item Proliferación de evaluaciones externas (PISA; PIRLS).
+						\item Cronbach (1963) y Scriven (1967) critican el modelo tyleriano.
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\centering
+				\begin{figure}
+					\includegraphics[width=0.4\linewidth]{../imagenes/cronbach}
+					\caption{L. J. Cronbach (1916 - 2001) Psicólogo EEUU que aportó a una conceptualización cuantitativa de la confiabilidad con su \textit{alfa de Cronbach}}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{quote}
+				A Cronbach (1967) y Scriven (1963) debemos algunos de los principios que hoy se defienden en lo que respecta a la evaluación educativa. Siendo de los primeros en asociar la evaluación a la toma de decisiones
+			\end{quote}
+		\end{block}
+		\begin{flushright}
+			Alcaraz, N. 2015
+		\end{flushright}
+	\end{frame}
+
+	\begin{frame}{Historia. 70' - 80'. Época de la profesionalización}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{}
+					\begin{itemize}[<+->]
+						\item Aparecen muchos modelos educativos, en la primera mitad con un fuerte enfoque tyloriano y la segunda mitad desmarcándose de este.
+						\item Aparece un nuevo modelo el naturalista: \textit{La evaluación en contexto}.
+						\item Se abandona el Positivismo característico de las épocas anteriores.
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\centering
+				\begin{figure}
+					\includegraphics[width=.4\linewidth]{../imagenes/stake}
+					\caption{Robert E. Stake (1927 - ). Psicólogo EEUU especialista en evaluación cualitativa, creó el modelo de Evaluación respondiente}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{quote}
+				La relación que se establece desde esta óptica entre el agente evaluador y la realidad, se fundamenta en que las interferencias entre ambos han de ser mínimas. De ahí, que no es hasta la tercera generación de la evaluación cuando se introduce como elemento de ésta, el juicio del evaluador.
+			\end{quote}
+		\end{block}
+		\begin{flushright}
+			Alcaraz, N. 2015
+		\end{flushright}
+	\end{frame}
+
+	\begin{frame}{Historia. Actualidad. La época ecléctica}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{}
+					\begin{itemize}[<+->]
+						\item Existe un gran número de conceptos acuñados que oscurecen el marco conceptual de la evaluación educativa.
+						\item La evaluación educativa a pesar de estar enmarcado en un paradigma natural la seguimos llamando indistintamente también desde el positivismo.
+					\end{itemize}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics[width=\linewidth]{../imagenes/enredo}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{}
+		\begin{block}{}
+			\begin{quote}
+				Tras las generaciones de la medición, la descripción, la del juicio y la sensible, recogidas por Guba y Lincoln (1982, 1989), cada una de las cuales definía una época y unas características concretas en torno a la manera de entender la \textbf{evaluación}, llegamos a la actualidad, donde hay tal variedad y mezcla de prácticas que, resulta difícil encontrar un elemento común que pueda caracterizar a la evaluación de nuestros tiempos, más allá del eclecticismo y la confusión.
+			\end{quote}
+		\end{block}	
+		\begin{flushright}
+			\cite{ALCARAZ2015}
+		\end{flushright}
+	\end{frame}
+
+	\begin{frame}{Resumen}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\smartdiagram[descriptive diagram]{
+					{1ra gen, {Hasta 1930. Pretayleriano}},
+					{2da gen, {1930 - 1957. Tyleriano}},
+					{3ra gen, {1957 - 1972. Realismo}}}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\smartdiagram[descriptive diagram]{
+				{4ta gen, {1973 - 1990. Naturalismo}},
+				{5ta gen, {1990 - actual. Ecléctica}}}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\section{Definiciones}
+
+	\begin{frame}{Conceptos: Evaluación, Medición y Calificación…y Assessment}
+		La siguiente definición:
+		\begin{quote}
+		Proceso de obtener una expresión numérica de algo en forma tal que nos permita hacer comparaciones cuantitativas con un patrón determinado. Su razón de ser es obtener datos para la evaluación.
+		\end{quote}
+		\begin{flushright}
+			\cite{ROSALES2014}
+		\end{flushright}
+		Corresponde al concepto de:
+		\begin{enumerate}
+			\item[A.] \textbf<2->{Medición}
+			\item[B.] Evaluación
+			\item[C.]Calificación
+			\item[D.] Assesment
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Conceptos: Evaluación, Medición y Calificación…y Assessment}
+		La siguiente definición:
+		\begin{quote}
+			\dots el proceso de recogida y tratamiento de informaciones pertinentes, válidas y fiables para permitir, a los actores interesados, tomar las decisiones que se impongan para mejorar las acciones y los resultados.
+		\end{quote}
+		\begin{flushright}
+			UNESCO, 2005 citado en \cite{ROSALES2014}
+		\end{flushright}
+			Corresponde al concepto de:
+		\begin{enumerate}
+			\item[A.] Medición
+			\item[B.] \textbf<2->{Evaluación}
+			\item[C.] Calificación
+			\item[D.] Assesment
+		\end{enumerate}		
+	\end{frame}
+
+	\begin{frame}{Conceptos: Evaluación, Medición y Calificación…y Assessment}
+		La siguiente definición:
+		\begin{quote}
+			\dots será la expresión [valoración] cualitativa (apto/no apto) o cuantitativa (10, 9, 8, etc) del juicio de valor que emitimos sobre la actividad y logros
+		\end{quote}
+		\begin{flushright}
+			\cite{RUIZ2009}
+		\end{flushright}
+		Corresponde al concepto de:
+		\begin{enumerate}
+			\item[A.] Medición
+			\item[B.] Evaluación
+			\item[C.] \textbf<2->{Calificación}
+			\item[D.] Assesment
+		\end{enumerate}
+	\end{frame}
+
+	\section{Conclusión}
+	
+	\begin{frame}{Conclusión}
+			
+			\begin{minipage}[c][0.01cm]{\textwidth}
+				\centering
+				\smartdiagramset{satellite fill opacity = 0.9}
+				\smartdiagram[bubble diagram]{Evaluar,
+					Objetivos, Retroalimentar, Medir, \textit{Calificar}, \textbf{Juzgar}}
+			\end{minipage}
+			
+	\end{frame}
+
+	\begin{frame}{Encuesta. Y ahora….}
+		\begin{block}{¿Qué es la evaluación?}
+			Es un:
+			\begin{enumerate}
+				\item[A.] \textbf<2->{proceso donde juzgamos un objeto.}
+				\item[B.] proceso donde valoramos un objeto.
+				\item[C.] momento donde juzgamos un objeto.
+				\item[D.] momento donde valoramos un objeto.
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Atención}
+		El concepto \textit{Assesment} es el equivalente en Inglés a \textit{Evaluación educativa}. La palabra anglosajona \textit{Evaluation} hace referencia a la generación de un juicio y la palabra \textit{Assesment} a la mejora continua. \cite{marketing91}
+		
+		
+	\end{frame}
+
+	\begin{frame}{Tarea}
+		\begin{block}{}
+			\begin{itemize}
+				\item Armar grupos de 3 personas.
+				\item Requisito: Los grupos deben ser de personas que presenten el mismo dominio de algún contenido.
+				\item Informar al docente vía Canvas (mensaje o chat) de los integrantes del grupo.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\section{Bibliografía}
+
+\begin{frame}[allowframebreaks]{Bibliografía}
+	
+	\bibliography{../bibliografia}
+	
+\end{frame}
+
+	\begin{frame}{}
+		\includegraphics[width=\linewidth]{../imagenes/thx}
+	\end{frame}
+\end{document}
+

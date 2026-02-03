@@ -1,0 +1,75 @@
+%INICIO DEL TEMPLATE
+\usetikzlibrary{shapes.geometric,arrows.meta}
+
+\newcommand{\templatepath}{../template}
+
+\pgfdeclareimage[width=16.2cm]{mybackground}{\templatepath/background-title-page}
+\setbeamertemplate{title page}{%
+	\begin{picture}(0,0)
+	\put(-45,-150){%
+		\pgfuseimage{mybackground}
+	}
+	\put(40,-8){%
+		%\fbox{
+			\begin{minipage}[b][10mm][t]{80mm}
+				\usebeamerfont{title}{\color{white} \inserttitle\par}
+		\end{minipage}}
+		%}
+	\put(36,-35){
+		%\fbox{
+			\begin{minipage}[b][5mm][t]{100mm}
+				\usebeamerfont{subtitle}{\color{white}\insertsubtitle\par}
+			\end{minipage}
+			%}
+	}
+
+	\put(36,-120){
+		%\fbox{
+			\begin{minipage}[b][10mm][t]{100mm}
+				\usebeamerfont{author}{\color{white}\insertauthor\par}
+			\end{minipage}
+			%}
+	}
+	\put(-20,-130){
+		\rotatebox{90}{\usebeamerfont{date}{\scriptsize{\color{white}\insertdate\par}}}
+	}
+\end{picture}
+
+}
+
+
+\pgfdeclareimage[width=16.2cm]{sectionbackground}{\templatepath/background-section-page}
+\setbeamertemplate{section page}{%
+	\begin{picture}(0,0)
+		\put(-45,-154){%
+			\pgfuseimage{sectionbackground}
+		}
+
+		\put(200,-70){
+			%\fbox{
+				\begin{minipage}[b][30mm][t]{50mm}
+					\usebeamerfont{section}{\color{white}\LARGE\insertsection\par}
+				\end{minipage}
+			%}
+		}
+
+
+
+	\end{picture}
+}
+
+\AtBeginSection{\frame[plain]{\sectionpage}}
+
+\setbeamertemplate{background}{
+	\includegraphics[width=16.2cm]{\templatepath/background-slide-page}
+}
+
+\setbeamertemplate{frametitle}{
+	%\fbox{
+		\begin{minipage}[c][14mm][b]{\textwidth}
+			\usebeamerfont{frametitle}{\color{black}\insertframetitle}
+	\end{minipage}}
+	%}
+
+\setbeamersize{text margin left=4em}
+\setbeamersize{text margin right=4em}

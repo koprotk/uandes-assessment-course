@@ -1,0 +1,365 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage[]{wasysym}
+\usepackage{tabularx} % para ajuste del tamaño de la tabla
+\usepackage{multirow} % juntar filas en una tabla
+\usepackage{chemfig}
+\usepackage{chemmacros}
+
+\newcommand\encircle[1]{% Poder crear letras dentro de círculos
+	\tikz[baseline=(X.base)]
+	\node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+
+  \usepackage{../template/uandes169template}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INICIO DEL CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\author{Prof. Daniel Muñoz \\
+	\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+\title{Síntesis del curso}
+\subtitle{Clase Final}
+\date{12 de junio de 2024} %\today{}} %agregar el día de hoy
+\maketitle
+
+\section{Informe Prueba 3}
+
+\begin{frame}{Prueba Sumativa 3}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\huge{Logro global: 86\%}\\
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\large{Pregunta Cerrada: 87\% \\
+				Pregunta Abierta: 80\% \\
+				Rúbrica Analítica: 87\% \\
+				OA-IE : 61\%}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Calendario}
+
+\begin{frame}{Calendario}
+	\begin{center}
+		\rowcolors[]{1}{blue!20}{blue!10}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Fecha} & \textbf{Tema de clase}     & \textbf{Evaluación} \\
+			\hline
+			hoy            & Síntesis del curso         & Formativa           \\
+
+			19/6           & Evaluaciones Pendientes    & Sumativa            \\
+
+			27/6           & Entrega portafolio (final) & Sumativa            \\
+
+			05/7           & Entrega de notas finales.  & Sumativa            \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\section{Repaso Curso}
+
+\begin{frame}{Historia de la evaluación}
+	\begin{center}
+		Nombre las generaciones de la \textit{evaluación de aprendizajes.}
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		\begin{enumerate}[<2->]
+			\item Pretyleriana
+			\item Tyleriana
+			\item Realismo
+			\item Naturalismo
+			\item Ecléctica
+		\end{enumerate}
+		\begin{flushright}
+			\cite{ALCARAZ2015}
+		\end{flushright}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}{Conceptos}
+	\begin{center}
+		¿Qué es la \textit{medición}?
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		Proceso de obtener una expresión numérica de algo en forma tal que nos permita hacer comparaciones cuantitativas con un patrón determinado. Su razón de ser es obtener datos para la evaluación. \cite{ROSALES2014}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Clasificación de la evaluación}
+	\begin{center}
+		Construya un cuadro resumen de la clasificación de la evaluación
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		\begin{figure}
+			\includegraphics[width=0.8\linewidth]{../imagenes/resumen_clasificacion_eva}
+			\caption{\cite{CASTILLO2010}}
+		\end{figure}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Criterios de calidad en la evaluación de aprendizajes}
+	Nombre y defina los criterios de calidad en evaluación de aprendizajes:
+
+	\begin{block}<2->{Respuesta}
+		\begin{itemize}[<+->]
+			\item Validez de contenido, coherencia contenido - evaluación.
+			\item Validez Instruccional, coherencia act. aprendizaje - evaluación.
+			\item Validez consecuencial, consecuencias - prop. evaluación.
+			\item Confiabilidad, suficiencia de información.
+			\item Objetividad, imparcialidad.
+		\end{itemize}
+		\begin{flushright}
+			\cite{FORSTER2008}
+		\end{flushright}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Taxonomía}
+	\begin{center}
+		Ejemplifique cada tipos de conocimiento.
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		\begin{itemize}[<2->]
+			\item Factual. Descubrimiento de america
+			\item Conceptual. Qué es un célula.
+			\item Procedimental. Como atarse los cordones.
+			\item Metacognitivo. Como planificar una jornada de estudio.
+		\end{itemize}
+		\begin{flushright}
+			\cite{KRATWOHL2002}
+		\end{flushright}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Taxonomía}
+	\begin{center}
+		Nombre una habilidad por tipo de Proceso Cognitivo
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		\begin{itemize}[<2->]
+			\item Recordar. Nombra.
+			\item Comprender. Relaciona.
+			\item Aplicar. Ejecuta.
+			\item Analizar. Compara.
+			\item Evaluar. Juzga.
+			\item Crear. Inventa.
+		\end{itemize}
+		\begin{flushright}
+			\cite{KRATWOHL2002}
+		\end{flushright}
+
+	\end{block}
+\end{frame}
+
+\begin{frame}{Tablas de especificaciones}
+	\begin{center}
+		Cuál es la estructura de un Indicador de evaluación
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		Verbo en modo indicativo + conocimiento/contenido + condición
+		\begin{flushright}
+			\cite{WESTED2021}
+		\end{flushright}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Instrumentos}
+	\begin{center}
+		De dos ejemplos de cada técnica de evaluación
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		\begin{itemize}[<2->]
+			\item Observación: listas de cotejo, diarios.
+			\item Interrogación: Encuestas, Exámenes.
+		\end{itemize}
+		\begin{flushright}
+			\cite{CASTILLO2010}
+		\end{flushright}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}{Instrumentos}
+	\begin{center}
+		Nombre 3 tipos de ítems cerrados:
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		\begin{itemize}[<2->]
+			\item Selección múltiple.
+			\item Términos pareados.
+			\item Ordenamiento.
+		\end{itemize}
+		\begin{flushright}
+			\cite{MIDE2021}
+		\end{flushright}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Instrumentos}
+	\begin{center}
+		Explique los dos tipos de rubricas.
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		\begin{itemize}[<2->]
+			\item Holísticas: Los niveles de desempeño describen la respuesta completa.
+			\item Analítica: Los niveles de desempeño describen diferentes dimensiones de la respuesta completa.
+		\end{itemize}
+		\begin{flushright}
+			\cite{CRAIG2000}
+		\end{flushright}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}{Construcción de exámenes}
+	\begin{center}
+		¿Cuanto puntaje posee un examen con 4 ítems de selección múltiple y una pregunta abierta que se corrige con una rúbrica analítica de 4x4?
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		\begin{itemize}[<2->]
+			\item Cada ítem cerrado: 1 punto.
+			\item Una rubrica 4x4 sería:
+			      \begin{tabular}{|c|c|c|c|c|}
+				      \hline
+				         & MAX & MAX-1 & MIN+1 & MIN \\
+				      \hline
+				      D1 & 3   & 2     & 1     & 0   \\
+				      \hline
+				      D2 & 3   & 2     & 1     & 0   \\
+				      \hline
+				      D3 & 3   & 2     & 1     & 0   \\
+				      \hline
+				      D4 & 3   & 2     & 1     & 0   \\
+				      \hline
+			      \end{tabular}
+			      total = 12.
+		\end{itemize}
+		\begin{flushright}
+			\cite{MIDE2021}
+		\end{flushright}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Retroalimentación efectiva}
+	\begin{center}
+		¿Cuál es la estructura de una retroalimentación efectiva?
+	\end{center}
+	\begin{block}<2->{Respuesta}
+		\begin{itemize}[<2->]
+			\item Lo que hizo bien + como puede mejorar.
+			\item Como puede mejorar = lo que se equivocó + pistas de como corregir.
+		\end{itemize}
+		\begin{flushright}
+			\cite{Heritage:2018tn}
+		\end{flushright}
+	\end{block}
+\end{frame}
+
+\section{Portafolio}
+
+\begin{frame}{Portafolio}
+	\justifying
+	El portafolio es una técnica evaluativa que bien inspirada en artistas, fotógrafos, dibujantes, etc. que para demostrar sus talentos muestran su \textit{portafolio} para que sean juzgados por un tercero. Ustedes, cual artistas, deberán mostrar su \textit{portafolio} para que los pueda evaluar. Es por ello, que para demostrar lo \textit{vivido} se les pedirá uno.
+\end{frame}
+
+\begin{frame}{Contenido del portafolio}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{block}{Estructura de su portafolio}
+				\begin{itemize}[<+->]
+					\item Presentación.
+					\item Marco Teórico.
+					\item Corrección Evaluación Sumativa 3.
+					\item Reflexión del curso.
+					\item Conclusión.
+					\item Bibliografía.
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1>{
+				Esta sección es una \textit{introducción al texto}, y en ella se deberá encontrar:
+				\begin{itemize}
+					\item Un párrafo que señale la necesidad de la evaluación educativa.
+					\item Una introducción de las secciones posteriores al lector.
+				\end{itemize}
+			}
+			\only<2>{
+				Esta sección es un breve resumen de la teoría de la evaluación educativa. Deberá incluir:
+				\begin{itemize}
+					\footnotesize
+					\item lo que es la evaluación de aprendizajes, definición de conceptos claves, con citas o referencias.
+					\item diferenciar entre evaluar, calificar y medir.
+					\item diferenciar evaluación edumétrica de psicométrica.
+					\item resumen de los criterios de calidad en la evaluación.
+					\item resumen de Retroalimentación efectiva.
+				\end{itemize}
+				Todos los puntos anteriores \textbf{deben estar citados}.
+			}
+			\only<3>{
+				Esta sección corresponde a la evolución de la evaluación sumativa 3, y en esta sección se debe incluir:
+				\begin{itemize}
+					\item la pauta original.
+					\item la pauta corregida (solo si NO obtuvieron puntaje máximo en la rubrica)
+					\item un relato de todos aquellos aspectos que cambió y como esta corrección hace de su trabajo \textit{más} válido y objetivo que el anterior o, si obtuvo puntaje máximo en la rubrica, explicar porque su trabajo \textit{es} válido y objetivo.
+				\end{itemize}
+			}
+			\only<4>{
+				En esta sección usted reflexionará acerca del propio proceso vivido en el curso y como a partir de este se proyecta en el campo de la educación, por ello debe incluir:
+				\begin{itemize}
+					\item Imaginar como será su futuro ejerciendo como evaluador/a.
+					\item Y cómo el curso \textit{cambió} su mirada de la evaluación de aprendizajes.
+				\end{itemize}
+			}
+			\only<5>{
+				Esta última sección debe ser la síntesis del curso expresada en su experiencia vivida valorando los aspectos positivos y criticando los negativos, es por ello que deberá dar su opinión argumentada del curso mostrando los aspectos que:
+				\begin{itemize}
+					\item le gustaron del curso y
+					\item deben ser mejorados del curso.
+				\end{itemize}
+			}
+			\only<6>{
+				Esta última sección corresponde a la bibliografía del curso utilizada en su portafolio en formato APA7.
+			}
+		\end{column}
+	\end{columns}
+
+
+\end{frame}
+
+\section{Bibliografía}
+
+\begin{frame}[allowframebreaks]{Bibliografía}
+
+	\bibliography{../bibliografia}
+
+\end{frame}
+
+{
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}
+	\makebox[\linewidth]{\includegraphics[width=\paperwidth]{../template/background_last_page}}
+\end{frame}
+}
+
+
+
+\end{document}

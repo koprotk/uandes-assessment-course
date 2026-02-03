@@ -1,0 +1,365 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\usepackage{pgfplots}
+\usepackage{../template/uandes169template}
+
+\begin{document}
+	\author{Prof. Daniel Muñoz \\ 
+		\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+	\title{Taxonomías en evaluación educativa}
+	\subtitle{Clase 5}
+	\date{9 de abril de 2025} %agregar el día de hoy
+	%\subject{subject}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+
+	\maketitle
+
+%%	\section{Resultados del proceso}
+
+	%% \begin{frame}{Análisis de resultados: Edumétrico}
+    %% 	\begin{columns}
+    %% 		\begin{column}{.5\linewidth}
+    %% 			\begin{block}{Objetivos Módulo 1}
+    %% 				\begin{enumerate}
+    %% 					\justifying
+    %% 					\item Comprender la teoría e historia de la evaluación de aprendizajes
+    %% 					\item Entender que la evaluación es un proceso técnico, pero por sobre todo una actividad ética.
+    %% 					\item Aplicar la teoría evaluativa en contextos a partir de testimonios reales o simulados.
+    %% 				\end{enumerate}
+    %% 			\end{block}
+    %% 		\end{column}
+    %% 		\begin{column}{.5\linewidth}
+    %% 		  \only<1>{
+    %% 			\begin{tikzpicture}
+    %% 				\begin{axis}[width=\linewidth,
+    %% 					symbolic x coords={EF1, EF2, ES1},
+    %% 					xtick=data, ylabel=Participación, bar width=20, ymin=0, ymax=100
+    %% 					]
+    %% 					\addplot[ybar,fill=blue] coordinates {
+    %% 						(EF1,   3)
+    %% 						(EF2,   13)
+    %% 						(ES1,   97)
+    %% 					};
+    %% 				\end{axis}
+    %% 			\end{tikzpicture}}
+    %% 		  \only<2>{
+    %% 			\begin{tikzpicture}
+    %% 				\begin{axis}[width=\linewidth,
+    %% 					symbolic x coords={OA1, OA2, OA3},
+    %% 					xtick=data, ylabel=Porcentaje de logro, bar width=20, ymin=0, ymax=100
+    %% 					]
+    %% 					\addplot[ybar,fill=blue] coordinates {
+    %% 						(OA1,   73)
+    %% 						(OA2,   83)
+    %% 						(OA3,   79)
+    %% 					};
+    %% 					\addplot[red,line legend,sharp plot,nodes near coords={},
+    %% 					update limits=false,shorten >=-3mm,shorten <=-3mm]
+    %% 					coordinates {(OA1,70) (OA3,70)}
+    %% 					node[midway,below]{exigencia 70\%};
+    %% 				\end{axis}
+    %% 			\end{tikzpicture}}
+    %% 		\end{column}
+    %% 	\end{columns}
+    %% \end{frame}
+
+	\section{Introducción}
+	\begin{frame}{Marco conceptual: ¿Qué es una taxonomía? \cite{STATEU2021}}
+		\begin{columns}
+			\begin{column}{.5\textwidth}
+				\begin{itemize}[<+->]
+					\item Una \textit{taxonomía} es una herramienta para construir objetivos de aprendizaje.
+					\item Nos permite tener un lenguaje común y concreto del desempeño a observar.
+					\item Es una herramienta que da coherencia a la evaluación y la enseñanza.
+					\item La primera de ellas fue la elaborado por Benjamin Bloom en 1950, en la Universidad de Chicago.
+					\item Todo esto es motivado por las ideas de \textit{Ralph Tylor}.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\textwidth}
+				\begin{figure}
+					\includegraphics<1>[width=.8\textwidth]{../imagenes/objetivo.png}
+					\includegraphics<2>[width=.8\textwidth]{../imagenes/same_language.jpg}
+					\only<3>{
+					\begin{tikzpicture}[node distance=2cm]
+						\node (eva) [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black] {Evaluación};
+						\node (ens) [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, below of=eva] {Enseñanza};
+						\draw [thick,<->,>=stealth] (eva) -- node[anchor=west] {Taxonomía} (ens);
+					\end{tikzpicture}}
+					\includegraphics<4>[width=.4\textwidth]{../imagenes/bloom}
+					\includegraphics<5>[width=\textwidth]{../imagenes/bloom_tyler}
+					\caption{
+						\only<1>{Clásico test para medir tu IQ en los años 30 con ello \textit{evaluaban tu inteligencia}.}
+						\only<2>{A veces creemos que basta con hablar el mismo idioma}
+						\only<3>{Una taxonomía media entre la enseñanza y la evaluación}
+						\only<4>{Benjamin Bloom (1913 - 1999) Creador de su famosa taxonomía junto a otro autores de EEUU}
+						\only<5>{Cita encontrada en el \textit{Handbook Cognitive Domain} \cite[pág 4]{BLOOM1956}}
+					}
+				\end{figure}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+\section{Taxonomía revisada de Anderson y Kratwohl}
+
+	\begin{frame}{Origenes de la Taxonomía de Bloom revisada\cite{KRATWOHL2002} (TBRAK)}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item La taxonomía original de Bloom es una taxonomía del \textit{Dominio Cognitivo}.
+					\item El \textit{Conocimiento} entendido por Bloom contenía ambos \textit{\color{red} lo que hacen} y \textit{\color{blue} lo que saben}. Anderson y Kratwohl separan ambos.
+					\item La taxonomía revisada de Bloom es una taxonomía del \textit{Conocimiento} y \textit{Procesos Cognitivos}.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1>{
+					\begin{block}{Original}
+						\begin{enumerate}
+							\item Conocer
+							\item Comprender
+							\item Aplicar
+							\item Analizar
+							\item Sintetizar
+							\item Evaluar
+						\end{enumerate}
+					\end{block}
+				}
+				\only<3>{
+					\begin{tikzpicture}[node distance= 2.2cm]
+						\node[rectangle, fill=gray!50] (org) {Original};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below of = org] (knowB) {Conocer};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below right of= knowB] (knowK) {Conocer};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below left of= knowB] (rem) {Recordar};
+						\node[rectangle, fill=gray!50, below right of = rem] (rev ){Revisada};
+						\draw[->,thick,>=stealth] (knowB)  -- node[anchor=west] {Conocimiento} (knowK);
+						\draw[->,thick,>=stealth] (knowB) -- node[anchor=east] {Proceso Cognitivo} (rem);
+					\end{tikzpicture}
+				}
+				\only<2>{
+					``\color{red}Los estudiantes deben ser capaces de recordar \color{blue} la ley de oferta y demanda en economía''
+				}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{El conocimiento en la TBRAK}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\only<1-7>{
+				\begin{block}{Factual}
+					Son los elementos básicos que un estudiante debe conocer para estar familiarizado con una disciplina o un problema a resolver en ella.
+					\begin{itemize}[<+->]
+						\item<2-> Conocimiento de la terminología.
+						\item<3-> Conocimiento de detalles específicos y elementales.
+					\end{itemize}
+				\end{block}}
+				\only<8->{
+				\begin{block}{Procedimiental}
+					Como hacer algo; métodos de investigación, y criterios para usar habilidades, algoritmos, técnicas y métodos.
+					\begin{itemize}
+						\item<9-> Conocimiento de habilidades, algoritmos, técnicas y métodos específicos de una materia.
+						\item<10-> Conocimiento de los criterios de uso de un determinado procedimiento.
+					\end{itemize}
+				\end{block}}
+			\end{column}
+			\begin{column}{.5\linewidth}
+			\only<4-10>{
+				\begin{block}{Conceptual}
+					La interrelación entre los elementos en una gran estructura que se les da una función conjunta.
+					\begin{itemize}
+						\item<5-> Conocimiento de clasificaciones y categorías.
+						\item<6-> Conocimiento de principios y generalizaciones.
+						\item<7-> Conocimiento de teorías, modelos y estructuras.
+					\end{itemize}
+				\end{block}}
+			\only<11->{
+			\begin{block}{Metacognición \cite{CAMBRIDGE2021}}
+				El conocimiento \textit{metacognitivo} en general es percatarse y conocer la propia cognición.
+				\begin{itemize}
+					\item<12-> Conocimiento de como abordar una tarea de aprendizaje.
+					\item<13-> Auto-conocimiento
+				\end{itemize}
+			\end{block}
+			}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{El proceso cognitivo en la TBRAK}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\only<1-14>{
+				\begin{block}<1->{Reconocer}
+					Recuperar conocimiento relevante desde la memoria de largo-plazo.
+					\begin{itemize}
+						\item<2-> Reconociendo.
+						\item<3-> Recordando.
+					\end{itemize}
+				\end{block}
+				\begin{block}<12->{Aplicar}
+					Usar un procedimiento en determinada situación.
+					\begin{itemize}
+						\item<13-> Ejecutando.
+						\item<14-> Implementando.
+					\end{itemize}
+				\end{block}}
+				\only<15-21>{
+				\begin{block}<15->{Analizar}
+					Separar en sus componentes y determinar como estos se tributan en una sola unidad de sentido.
+					\begin{itemize}
+						\item<16-> Diferenciando
+						\item<17-> Organizando
+						\item<18-> Atribuyendo
+					\end{itemize}
+				\end{block}}
+				\only<22->{
+				\begin{block}{Crear}
+					Agregar elementos en un todo innovador y coherente o desarrollando un nuevo producto.
+					\begin{itemize}
+						\item<23-> Generando
+						\item<24-> Planeando
+						\item<25-> Produciendo
+					\end{itemize}
+				\end{block}}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1-14>{
+				\begin{block}<4->{Comprender}
+					Determinar el significado de instrucciones, orales, escritas, y gráfica.
+					\begin{itemize}
+						\item<5-> Interpretando
+						\item<6-> Ejemplificando
+						\item<7-> Clasificando
+						\item<8-> Resumiendo
+						\item<9-> Infiriendo
+						\item<10-> Comparando
+						\item<11-> Explicando
+					\end{itemize}
+				\end{block}}
+				\only<15->{
+					\begin{block}<19->{Evaluar}
+						Hacer juicios a partir de un criterio o un estándar.
+						\begin{itemize}
+							\item<20-> Chequeando.
+							\item<21-> Criticando.
+						\end{itemize}
+					\end{block}}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Con esto analizaremos nuestros OA para la evaluación y la enseñanza}
+		\justifying
+		Finalmente con este conocimiento analizaremos nuestros OA a partir de \textit{sustantivos de contenido} y \textit{verbos} para determinar donde se ubica nuestro OA, es importante que entienda que los OA se pueden colocar en varias celdas de la tabla.
+		\begin{center}
+			\textbf{Proceso Cognitivo}
+			\rowcolors[]{1}{blue!20}{blue!10}
+			\begin{tabular}{r|c|c|c|c|c|c}
+				\hline
+				 \textbf{Conocimiento} & Recordar & Comprender & Aplicar & Analizar & Evaluar & Crear \\
+				\hline
+				 Factual &  &  &  &  &  &  \\
+				\hline
+				Conceptual &  &  &  &  &  &  \\
+				\hline
+				 Procedimental &  &  &  &  &  &  \\
+				\hline
+				Metacognitivo &  &  &  &  &  &  \\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Ejemplo}
+		Ubique el siguiente OA13 en la \textit{tabla taxonómica}:
+		\begin{exampleblock}{}
+			\justifying
+		\only<1>{
+			``Desarrollar modelos que expliquen la estereoquímica e isomería de compuestos orgánicos como la glucosa, identificando sus propiedades y su utilidad para los seres vivos.''}
+		\only<2->{
+			``{\color{red}Desarrollar} modelos que {\color{red}expliquen} la {\color{blue}estereoquímica} e {\color{blue}isomería} de compuestos orgánicos como la glucosa, {\color{red}identificando} sus {\color{blue}propiedades} y su {\color{blue}utilidad} para los seres vivos.''}
+			\begin{flushright}
+				\cite{MINEDUC2021}
+			\end{flushright}
+		\end{exampleblock}
+		\begin{center}
+			\textbf{\color{red}Proceso Cognitivo}
+			\rowcolors[]{1}{blue!20}{blue!10}
+			\begin{tabular}{r|c|c|c|c|c|c}
+				\hline
+				\textbf{\color{blue}Conocimiento} & Recordar & Comprender & Aplicar & Analizar & Evaluar & Crear \\
+				\hline
+				Factual & \only<3->{OA13} &  & &  &  &  \\
+				\hline
+				Conceptual &  & \only<3->{OA13} &  &  &  &  \\
+				\hline
+				Procedimental &  &  & \only<3->{OA13}  &  &  &  \\
+				\hline
+				Metacognitivo &  &  &  &  &  &  \\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{frame}
+
+	\begin{frame}{Otras Taxonomías: Habilidades Cognitivolingüisticas \cite{JORBA2000}}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{block}{Definición}
+					\textit{``Jorba (2000), plantea que las habilidades cognitivo-lingüísticas son aquellas que se activan para producir diferentes tipologías textuales, que además son transversales, pero que a su vez se concretan de manera diferenciada en cada una de las áreas curriculares''} \cite{CASTILLO2013}
+				\end{block}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1-5>{
+					\begin{block}{Habilidades Cognitivolingüistica}
+						\begin{itemize}[<+->]
+							\item Narrar
+							\item Describir
+							\item Definir
+							\item Explicar
+							\item Demostrar
+						\end{itemize}
+					\end{block}}
+				\only<6->{
+				\begin{figure}
+					\includegraphics[width=\linewidth]{../imagenes/TBAK_THC}
+					\caption{Integración entre TBAK y las Habilidades Cognitivolingüisticas}
+				\end{figure}}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Evaluación Formativa}
+		En Canvas se dejó una evaluación formativa que consisten en clasificar diferentes OA en la \textit{tabla taxonómica}. Resuélvala junto a sus compañeros de grupo para discutirla en el grupo curso.
+	\end{frame}
+
+	\section{Bibliografía}
+
+	\begin{frame}[allowframebreaks]{Bibliografía}
+
+		\bibliography{../bibliografia}
+
+	\end{frame}
+
+	{
+	\setbeamertemplate{navigation symbols}{}
+	\begin{frame}{}
+		\makebox[\linewidth]{\includegraphics[width=\paperwidth]{../template/background-last-page}}
+	\end{frame}
+}
+
+
+
+\end{document}

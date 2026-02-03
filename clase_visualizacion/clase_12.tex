@@ -1,0 +1,395 @@
+\documentclass[11pt, aspectratio=169, xcolor=table]{beamer} %aspectratio=169 presentación en 16:9; xcolor=table usar color en las tablas
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+%-------------Beamer------------------%
+ \usetheme{Cuerna} 
+ \usecolortheme{bluesimplex} %color del paquete
+%-------------Marca de agua ---------------- (quitar comentario si se desea activar)
+%\usepackage{background}
+%\backgroundsetup{
+%	placement=center,
+%	scale=4,
+%	contents={Preliminar},
+%	opacity=1
+%}
+%\setbeamertemplate{background}{\BgMaterial}
+%--------------------------------------------
+
+\usepackage{graphicx} %incluír imágenes
+\usepackage{hyperref} %agregar urls
+\usepackage{ragged2e} %alinear a la izquierda y justificar.
+% \setbeamertemplate{bibliography item}[text] Colocar números en lugar de íconos.
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio local, otros estilos: plain.
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage{wasysym} %agregar un cuadrado como símbolo de lista
+\usepackage{tabularx} % para ajuste del tamaño de la tabla
+\usepackage{multirow} % juntar filas en una tabla
+
+\newcommand\encircle[1]{% Poder crear letras dentro de círculos
+	\tikz[baseline=(X.base)] 
+	\node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+
+\newcommand{\comment}[1]{} % crear comentario multilinea
+
+\begin{document}
+	\author{Prof. Daniel Muñoz \\ 
+		\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+	\title{Visualización de datos de evaluaciones sumativas}
+	%\subtitle{subtitulo}
+	\logo{
+		\includegraphics[width=1.8cm]{../marca_principal.png}
+	}
+	\institute{Facultad de Educación, Universidad de los Andes}
+	\date{\today{}} %agregar el día de hoy
+	%\subject{subject}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}[plain]
+		\setbeamertemplate{logo}{} %eliminar logo de la portada
+		\maketitle
+	\end{frame}
+
+	\section{Repaso de la clase anterior}
+	
+		\begin{frame}{El ciclo de la evaluación formativa. \cite{AC2010}}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}
+					\item<1-> El ciclo de la evaluación formativa.
+					\item<2-> Consiste de tres etapas:
+					\begin{enumerate}
+						\item<3-> ¿Hacia donde voy?
+						\item<4-> ¿Dónde estoy?
+						\item<5-> ¿Cómo sigo?
+					\end{enumerate}
+					\item<6-> En esto la \textit{retroalimentación} es fundamental ya que nos permite superar esa \textit{brecha}.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1-2>{\includegraphics[width=\linewidth]{../imagenes/ciclo_formative}}
+				\only<3>{Los objetivos de aprendizaje, criterios de logro deben ser de explicito conocimiento y entendimiento. El estudiante debe saber \textit{Para qué vino a clases}}\\
+				\only<4>{El estudiante debe saber cual es su nivel, dónde está en al ruta del aprendizaje, para eso evaluamos y le señalamos exactamente cómo está el aprendizaje logrado hasta ahora  y ...}
+				\only<5>{Cómo mejorar para llegar al destino}
+				\only<6>{
+					\begin{tikzpicture}[node distance= 3cm]
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black] (zda) {Estado actual};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below of = zda] (zdp) {Aprendizaje};
+						\draw[|-|,thick,>=stealth] ([xshift = 2cm] zda.south)  -- node[anchor=west] {Brecha} ([xshift = 2cm] zdp.north);
+						\draw[>-<,thick,>=stealth] (zda) -- node[anchor=east] {Retroalimentación} (zdp);
+				\end{tikzpicture}}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\section{La retroalimentación efectiva}
+	
+	\begin{frame}{La retroalimentación efectiva}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Primero que todo, ¿vale la pena retroalimentar?
+					\item ¿En qué consiste una retroalimentación?
+					\item Una correcta retroalimentación debe responder a criterios de calidad.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\begin{figure}
+					\includegraphics<1>[width=\linewidth]{../imagenes/feedback_hattie}
+					\only<2>{
+						\begin{columns}
+							\begin{column}{.3\linewidth}
+								\begin{block}{}
+									\flushright
+									Lo que el estudiante hizo bien
+								\end{block}	
+							\end{column}
+							\begin{column}{.3\linewidth}
+								\centering +
+							\end{column}
+							\begin{column}{.3\linewidth}
+								\begin{block}{}
+									\flushleft Como mejorar
+								\end{block}	
+							\end{column}
+						\end{columns}
+					}
+					\only<1>{\caption{``Hattie Rank''  \cite{HATTIE2017}} }
+					\only<2>{\caption{Estructura de una \textit{retroalimentación}}}
+				\end{figure}
+				\only<3->{
+					Una \textit{retroalimentación efectiva} debe:
+					\begin{itemize}
+						\item<4-> estar relacionada con la meta.
+						\item<5-> entregar pistas, \textbf{no soluciones}.
+						\item<6-> captar el razonamiento del estudiante.
+						\item<7-> ser usada por el estudiante.
+						\item<8-> enfocarse en el aprendizaje y \textbf{no} el individuo.
+					\end{itemize}
+				}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\section{De la data a la visualización}
+	
+	\begin{frame}{Visualización de datos: estética}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Se pueden ver tres gráfico para A = 3, B = 5 y C = 4
+					\item El gráfico \textit{ugly} posee colores diferentes para A, B y C muy brillantes los cuales no aportan nada, tipografías diferentes y un fondo muy marcado.
+					\item El gráfico \textit{bad} las barras no permiten hacer comparaciones, presenta escalas diferentes.
+					\item El gráfico \textit{wrong} al no tener un eje Y no podemos saber nada respecto del gráfico ni establecer comparaciones.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics[width=\linewidth]{grafico_1}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\section{Sistemas de coordenadas y ejes}
+	\begin{frame}{Sistemas de coordenadas y ejes}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				Existen diversos tipos de coordenadas y escalas
+				\begin{itemize}[<+->]
+					\item Cartesianas clásicas
+					\item Cartesiana con etiquetas ¿Por qué no unir con líneas?
+					\item Tipos de ejes en escalas: lineales y logarítmicas.
+					\item En general escalas logarítmicas permiten acercar valores que están muy alejados, no es de uso en educación.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics<1>[width=\linewidth]{cartesiana_clasica}
+				\only<2>{
+				\begin{tikzpicture}
+					\begin{axis}
+						[
+						,width=7cm
+						,xlabel=Mes
+						,ylabel=Procentaje de Logro
+						,xtick=data,
+						%,xtick={0,1,...,3}
+						,xticklabels={Mar,Abr,May,Junio}
+						]
+						\addplot+[only  marks] coordinates
+						{(0,18.26) (1,21.47) (2,24.58) (3,24.95)};
+					\end{axis}
+				\end{tikzpicture}
+				}
+				\includegraphics<3>[width=\linewidth]{ejes}
+				\includegraphics<4>[width=\linewidth]{escala_logaritmica}
+			\end{column}	
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Escalas de color}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				Las escalas son importantes, es importante usar escalas de colores llamativos, pero no excesivos, ejemplo de escalas de color:
+				\begin{itemize}[<+->]
+					\item Okabe Ito (2008)
+					\item ColorBrewer Dark2 (Brewer, 2017)
+					\item ggplot2 hue
+					\item Un buen uso del color permite centrar la atención
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics<1>[width=\linewidth]{okabeito}
+				\includegraphics<2>[width=\linewidth]{brewer}
+				\includegraphics<3>[width=\linewidth]{ggplot2}
+				\includegraphics<4>[width=\linewidth]{color_plot}
+			\end{column}
+		\end{columns}	
+	\end{frame}
+	
+	\begin{frame}{Gráficos para representar cantidades}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item barras verticales
+					\item barras verticales agrupadas
+					\item barras horizontales
+					\item barras horizontales agrupadas
+					\item barras verticales apiladas
+					\item barras horizontales apiladas
+					\item mapas de calor
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics<1>[width=\linewidth]{barrasv}
+				\includegraphics<2>[width=\linewidth]{barrasva}
+				\includegraphics<3>[width=\linewidth]{barrash}
+				\includegraphics<4>[width=\linewidth]{barrasha}
+				\includegraphics<5>[width=\linewidth]{barrasvs}
+				\includegraphics<6>[width=\linewidth]{barrashs}
+				\includegraphics<7>[width=.8\linewidth]{mapacalor}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Algunos gráficos de distribución}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item histograma (variable discreta)
+					\item gráfico densidad (variable continua)
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics<1>[width=\linewidth]{histograma}
+				\includegraphics<2>[width=\linewidth]{density}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Gráficos de proporciones}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Gráficos de torta
+					\item Barras
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1>{
+					\begin{tikzpicture}
+							\pie[radius=2]{
+								88/Acuerdo,
+								12/Desacuerdo}
+					\end{tikzpicture}}
+				\includegraphics<2>[width=\linewidth]{barras1}
+				\includegraphics<2>[width=\linewidth]{barras2}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Gráficos xy}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Dispersión
+					\item Burbujas
+					\item Dispersión con tendencia
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics<1>[width=\linewidth]{dispersion}
+				\includegraphics<2>[width=\linewidth]{burbuja}
+				\includegraphics<3>[width=\linewidth]{despersion_t}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Principio de proporcionalidad de tinta}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item ``Cuando una región es ennegrecida (colorida) para representar un valor numérico, el área ennegrecida debe ser proporcional al valor correspondiente'' (Bergstrom and West, 2016)
+					\item Este gráfico tiene problemas ¿cuales?
+					\item Mejor así
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics<2>[width=\linewidth]{propink_no}
+				\includegraphics<3>[width=\linewidth]{propink_yes}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\section{Títulos, leyendas y tablas}
+	
+	\begin{frame}{Leyendas}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Ojo con el orden de las entradas en la leyenda
+					\item Mejor así
+					\item Sin leyenda, a veces mejor.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics<1>[width=\linewidth]{leyend_bad}
+				\includegraphics<2>[width=\linewidth]{leyend_good}
+				\includegraphics<3>[width=\linewidth]{leyend_better}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Tablas}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Cuidado con colores y diseño
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics[width=\linewidth]{tablas}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Evita las líneas}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Siempre es mejor evitar las líneas
+					\item mejor así
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\only<1>{
+				\begin{tikzpicture}
+					\begin{axis}[width=\linewidth]
+						\addplot [
+						ybar,
+						] coordinates {
+							(0,3) (1,2) (2,4) (3,1) (4,2)
+						};
+					\end{axis}
+				\end{tikzpicture}
+				}
+				\only<2>{
+				\begin{tikzpicture}
+					\begin{axis}[width=\linewidth]
+						\addplot [
+						ybar,fill=blue
+						] coordinates {
+							(0,3) (1,2) (2,4) (3,1) (4,2)
+						};
+					\end{axis}
+				\end{tikzpicture}
+				}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}{Definitivamente evite los 3D}
+		\begin{columns}
+			\begin{column}{.5\linewidth}
+				\begin{itemize}[<+->]
+					\item Si tiene un gráfico en 3D trate...
+					\item de dejarlo en 2D siempre que pueda.
+				\end{itemize}
+			\end{column}
+			\begin{column}{.5\linewidth}
+				\includegraphics<1>[width=\linewidth]{3D_no}
+				\includegraphics<2>[width=\linewidth]{3D_yes}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\section{Bibliografía}
+	
+	\begin{frame}[allowframebreaks]{Bibliografía}
+		\nocite{WILKE2019}
+		
+		\bibliography{../bibliografia}
+		
+	\end{frame}
+	
+\end{document}

@@ -1,0 +1,748 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage[]{wasysym}
+\usepackage{tabularx} % para ajuste del tamaño de la tabla
+\usepackage{multirow} % juntar filas en una tabla
+\usepackage{chemfig}
+\usepackage{chemmacros}
+
+\newcommand\encircle[1]{% Poder crear letras dentro de círculos
+	\tikz[baseline=(X.base)]
+	\node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+
+\usepackage{../template/uandes169template}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INICIO DEL CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\author{Prof. Daniel Muñoz \\
+	\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+\title{Preguntas abiertas, rubricas, puntuación y construcción de exámenes}
+\subtitle{Clase 10}
+\date{14 de mayo}
+\maketitle
+
+% \section{Análisis Evaluación Sumativa}
+
+% 	\begin{frame}{Análisis. Prueba 2}
+% 	  \begin{columns}
+% 		\begin{column}{.3\linewidth}
+% 		  \Huge 15\% EF.\\
+% 		  \Huge 95\% ES.
+% 		\end{column}
+% 		\begin{column}{.7\linewidth}
+% 		  \begin{itemize}
+% 			\item[\checkmark] Crear indicadores según TRAK: 100\%
+% 			\item[\checkmark] Adaptar un OA a partir de una fuente: 64\%
+% 			\item[\checkmark] Documentar la planificación evaluativa: 93\%
+% 		  \end{itemize}
+% 		\end{column}
+% 	  \end{columns}
+% 	\end{frame}
+
+\section{Resumen}
+
+\subsection{Técnicas de Observación e Interrogación}
+\begin{frame}{Técnicas evaluativas: Observación}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{block}{Técnicas de Observación}
+				El sujeto posee una actitud pasiva frente al evaluador y el instrumento. Este tipo de técnicas se usan con frecuencia para registrar el \textit{día a día}.
+				\begin{itemize}
+					\item sistematizada
+					      \begin{itemize}
+						      \item Listas de cotejo
+						      \item<2-> escalas de estimación
+					      \end{itemize}
+					\item no sistematizada
+					      \begin{itemize}
+						      \item<3-> notas de campo.
+						      \item<4-> registros anecdóticos.
+						      \item<5-> diario.
+						      \item<6-> Registro de evidencias.
+					      \end{itemize}
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}{Técnicas de Interrogación}
+				\justifying
+				Los instrumentos de interrogación dependen de una participación activa del sujeto en el proceso. Esta técnica nace de la \textit{mayéutica} socrática.
+				\begin{itemize}
+					\item<7-> Entrevistas: estructuradas, semi-estructuradas.
+					\item<8-> Encuestas.
+					\item<9-> Exámenes.
+					\item<10-> Pruebas Objetivas.
+					\item<11-> Test.
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Preguntas Cerradas}
+\begin{frame}{Pregunta cerrada \cite{MIDE2021}}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			Los ítems de preguntas cerradas o repuesta única pueden ser:
+			\begin{itemize}
+				\item<1-> términos pareados
+				\item<2-> completación.
+				\item<3-> ordenamiento.
+				\item<4-> verdadero y falso.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1>{
+				\begin{exampleblock}{Empareje los conceptos}
+					\begin{columns}
+						\begin{column}{.3\linewidth}
+							Columna 1
+							\begin{enumerate}
+								\small
+								\item Sodio
+								\item Cloro
+								\item Xenon
+							\end{enumerate}
+						\end{column}
+						\begin{column}{.4\linewidth}
+							Columna 2
+							\begin{itemize}
+								\small
+								\item[\dots] es alcalino.
+								\item[\dots] es boroídeo.
+								\item[\dots] es halógeno.
+								\item[\dots] es gas noble.
+							\end{itemize}
+						\end{column}
+					\end{columns}
+				\end{exampleblock}
+				\begin{alertblock}{Recomendaciones}
+					\begin{itemize}
+						\small
+						\justifying
+						\item Usar conceptos relacionados y ordenados 	lógicamente en ambas columnas.
+						\item Incluir más elementos en la segunda columna.
+					\end{itemize}
+				\end{alertblock}
+			}
+			\only<2>{
+				\begin{exampleblock}{Complete la oración}
+					\justifying
+					Un ..... presenta carga nula, en cambio un ..... presenta carga positivo y por el contrario un ..... presenta carga negativa.
+				\end{exampleblock}
+				\begin{alertblock}{Recomendaciones}
+					\begin{itemize}
+						\small
+						\justifying
+						\item Los espacios deben tener la misma extensión.
+						\item Usar un espacio por palabra a completar.
+						\item Evitar frases extensas y/o ambiguas.
+						\item Utilizar solamente cuando las posibilidades de respuestas son \textbf{muy limitadas}.
+					\end{itemize}
+				\end{alertblock}
+			}
+			\only<3>{
+				\begin{exampleblock}{\justifying Ordene las siguiente particulas subatómicas según masa, siendo 1 la más liviana 3 la de mayor masa.}
+					\begin{itemize}
+						\item[\dots] quark.
+						\item[\dots] protón.
+						\item[\dots] electrón.
+					\end{itemize}
+				\end{exampleblock}
+				\begin{alertblock}{Recomendaciones}
+					\begin{itemize}
+						\item El orden deben ser \textbf{único}.
+						\item El orden debe responder a un criterio \textit{objetivo}.
+					\end{itemize}
+				\end{alertblock}
+			}
+			\only<4>{
+				\begin{exampleblock}{\justifying Marque la V de verdadero o F de falso según corresponda a cada enunciado}
+					\begin{tabularx}{\linewidth}{Xc}
+						Cristobal Colón descubrió América en 1592.                        & \encircle{V} \encircle{F} \\
+						Las carabelas de Colón eran: La Pinta, La Niña y La Santa Iglesia & \encircle{V} \encircle{F} \\
+					\end{tabularx}
+				\end{exampleblock}
+			}
+			\only<5>{
+				\begin{alertblock}{Recomendaciones}
+					\begin{itemize}
+						\justifying
+						\small
+						\item Los enunciados no deben expresar opiniones y deben ser lo \textit{más objetivos} posibles.
+						\item Solo una idea central por enunciado.
+						\item No usar conceptos que impliquen ambigüedad (ej. frecuentemente, a veces)
+						\item Evitar expresiones absolutas (jamás, siempre, nunca, todo el tiempo, etc.)
+						\item Máxima claridad en los enunciados.
+						\item Ordenar los enunciados de forma aleatoria.
+					\end{itemize}
+				\end{alertblock}
+			}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Ítem preguntas cerradas: Opción múltiple \cite{MIDE2021}}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\textbf<2>{Lee el siguiente enunciado:
+				\begin{quote}
+					``El átomo es un esfera de carga  neutra que presenta electrones incrustados en una gran base positiva``
+				\end{quote}}
+			\textbf<3>{¿Qué modelo atómico se describe en el enunciado anterior?}
+			\textbf<4-5>{
+				\begin{enumerate}
+					\item[a)] \textbf<7>{Planetario.}
+					\item[b)] \textbf<7>{Sommerfield.}
+					\item[c)] \textbf<6>{Pan de pascua.}
+					\item[d)] \textbf<7>{Mecano-cuántico.}
+				\end{enumerate}}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<2>{
+				\begin{block}{Contexto}
+					\justifying Sirve como punto de referencia para el enunciado, es optativo, puede ser: gráfico, escrito, audio o video.
+				\end{block}
+				\begin{alertblock}{Recomendaciones}
+					\begin{itemize}
+						\justifying
+						\item Incluir contexto necesarios y verosímiles.
+						\item El contexto no puede ser un elemento que de pistas de la respuesta. Por ello es necesario para responder.
+					\end{itemize}
+				\end{alertblock}
+			}
+			\only<3>{
+				\begin{block}{Enunciado}
+					\justifying Es la pregunta o tarea concreta que se le solicita al evaluado.
+				\end{block}
+				\begin{alertblock}{Recomendaciones}
+					\begin{itemize}
+						\justifying
+						\small
+						\item Claro y sin ambigüedades.
+						\item Evitar afirmaciones negativo, pero en caso de usarlas destacar la negación.
+						\item Idealmente el enunciado (más contexto) debe permitir generar la respuesta del estudiante sin ver las alternativas.
+						\item No usar \textit{doble proceso}. a) Solo I, b) Solo II, c) I y II, d) II y III, etc.
+					\end{itemize}
+				\end{alertblock}
+			}
+			\only<4>{
+				\begin{block}{Alternativas}
+					\justifying Es el número de respuestas \textbf{plausibles} para el enunciado (más contexto).
+				\end{block}}
+			\only<5>{
+				\begin{alertblock}{Recomendaciones}
+					\begin{itemize}
+						\justifying
+						\small
+						\item Cuatro alternativas: una correcta y  tres incorrectas.
+						\item Misma estructura gramatical mismos modos y tiempos verbales.
+						\item Directas e independientes unas de otras.
+						\item Idéntica lógica y/o contenido.
+						\item Evitar el uso de \textit{ninguna de las anteriores} o similares.
+						\item Número de caracteres similares.
+						\item \textbf{Ordenarlas lógicamente: menor a mayor, menos extensa a más extensa.}
+					\end{itemize}
+				\end{alertblock}}
+			\only<6>{
+				\begin{block}{Clave o alternativa correcta}
+					La clave debe ser única y totalmente \textit{objetiva}.
+				\end{block}
+				\begin{alertblock}{Recomendaciones}
+					\begin{itemize}
+						\item Debe responder al enunciado.
+						\item No debe ser de una lógica diferente al resto.
+						\item Extensión similar al resto.
+						\item Evitar marcas textuales o conceptos próximos entre el enunciado y la clave.
+					\end{itemize}
+				\end{alertblock}
+			}
+			\only<7>{
+				\begin{block}{Distractores}
+					Aquellas alternativas que sirven para diferenciar a un estudiante del que no. Estas deben ser plausibles. \textit{objetiva}.
+				\end{block}
+				\begin{alertblock}{Recomendaciones}
+					\begin{itemize}
+						\justifying
+						\item Basarse en ideas previas.
+						\item Incluir errores conceptuales.
+						\item Usar creencias comunes o de dominio popular.
+						\item Usar intervenciones sus estudiantes para construirlas.
+					\end{itemize}
+				\end{alertblock}
+			}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Observe con atención la siguiente pregunta}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			¿Qué tipo de juego usan en familia?
+			\begin{itemize}
+				\item[a)] juegos de mesa.
+				\item[b)] juegos de video.
+				\item[c)] juegos de cartas.
+				\item[d)] juegos de tablero.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<2->{
+				¿Qué tipo de juego usan en familia? Juegos de:
+				\begin{itemize}
+					\item[a)] mesa.
+					\item[b)] video.
+					\item[c)] cartas.
+					\item[d)] tablero.
+				\end{itemize}
+			}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Preguntas  Abierta}
+\begin{frame}{Creación de preguntas abiertas o de respuesta construida}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{block}{¿Cuándo usar preguntas abiertas?}
+				\begin{itemize}[<+->]
+					\justifying
+					\item Cuando debemos evaluar indicadores de alto nivel cognitivo (no excluyente).
+					\item Cuando existen múltiples respuestas correctamente válidas para un desempeño.
+					\item Considerar solamente si es capaz de codificar las respuestas posibles, para asegurar la objetividad en la corrección.
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}{Ventajas \checkmark y Desventajas $\times$}
+				\begin{itemize}
+					\item[\checkmark]<4-> Se desempeñan bien en una gran cantidad de contextos.
+					\item[\checkmark]<5-> Permiten medir desempeños complejos.
+					\item[\checkmark]<6-> Altamente reutilizables.
+					\item[$\times$]<7-> Lenta corrección.
+					\item[$\times$]<8-> Difíciles de construir.
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Preguntas abiertas: Ejemplos y Recomendaciones}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{exampleblock}{Ejemplos}
+				\begin{itemize}[<+->]
+					\small
+					\item Dibuje un mapa conceptual la clasificación de los diferentes tipos de evaluación educativa con \textit{3 conceptos y 2 sub-conceptos por cada uno}.
+					\item Escriba una fábula \textit{que incluya 1 personaje principal y 2 secundarios en el espacio asignado.}
+					\item Justifique en \textit{dos argumentos verificables} porque el ácido se vierte sobre el agua como norma de laboratorio y no al revés.
+				\end{itemize}
+			\end{exampleblock}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}{Recomendaciones}
+				\begin{itemize}
+					\item<4-> Usar un lenguaje claro, para ello:
+					      \begin{itemize}
+						      \item<5-> Usar verbos que impliquen acciones precisas (Dibuje, Calcule, compare, diseñe, etc.)
+						      \item<6-> Explicitar el nivel de detalle, ejemplo: Entregue dos ejemplos.
+					      \end{itemize}
+					\item<7-> Evitar inclusión de elementos innecesarios en la pregunta. Usar contextos solamente cuando sea necesario.
+					\item<8-> Utilizar \textit{restricciones (condicionantes cuantitativas)}
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}{Rubricas}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}[<+->]
+				\item Las preguntas abiertas nos permiten recoger información que nos entrega el estudiante. Pero a diferencia de las preguntas cerradas, estas no nos indican como clasificar al estudiante con su respuesta.
+				\item Entonces siempre que construimos una pregunta abierta también debemos construir su \textit{rúbricas} respectiva.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}<3>{La rúbrica}
+				\begin{itemize}
+					\item Una rúbrica es un instrumento que nos permite clasificar los desempeños de los sujetos evaluados.
+					\item En general toda rúbrica es una tabla que posee filas y columnas.
+					\item Generalmente:
+					      \begin{itemize}
+						      \item Las columnas son los niveles de logro que obtiene el estudiante
+						      \item Las filas son las dimensiones a evaluar.
+					      \end{itemize}
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Tipos de Rúbricas: Holistica \cite{CRAIG2000}}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{block}{Holistica}
+				Rubricas donde el desempeño no necesita subdividirse y por tanto basta con describir los diferentes niveles de logro desde el nivel máximo de logro hasta el nivel ausente.
+			\end{block}
+			\begin{alertblock}<3->{$\rightarrow$}
+				Este ejemplo es solo una guía de formato.
+			\end{alertblock}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1>{
+				\begin{tabularx}{\linewidth}{|c|X|}
+					\hline
+					Puntaje & Descripción                                       \\
+					\hline
+					3       & Presenta tres argumentos correctos                \\
+					\hline
+					2       & Presenta dos argumentos correctos                 \\
+					\hline
+					1       & Presenta un argumento correcto                    \\
+					\hline
+					0       & no entrega la tarea o esta no tiene lo solicitado \\
+					\hline
+				\end{tabularx}}
+			\only<2->{\footnotesize
+				\begin{tabularx}{\linewidth}{|c|X|X|}
+					\hline
+					Puntaje & Descripción                                       & Ejemplo                    \\
+					\hline
+					3       & Presenta tres argumentos correctos                & Ejemplo de tres argumentos \\
+					\hline
+					2       & Presenta dos argumentos correctos                 & Ejemplo de dos argumentos  \\
+					\hline
+					1       & Presenta un argumento correcto                    & Ejemplo de un argumentos   \\
+					\hline
+					0       & no entrega la tarea o esta no tiene lo solicitado & Sin ejemplo                \\
+					\hline
+				\end{tabularx}}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Rúbrica Analítica}
+	\begin{block}{Análitica}
+		Las rúbrica analíticas se usan cuando el desempeño puede subdividirse en dimensiones independientes. Personalmente es el tipo de rúbrica que recomiendo.
+	\end{block}
+	\begin{exampleblock}{Ejemplo}
+		Por espacio en la presentación no puedo mostrar rúbricas analíticas pero aquí hay algunos ejemplos destacables:
+		\begin{itemize}
+			\item \url{http://rubistar.4teachers.org/index.php?screen=ShowRubric&rubric_id=2821442&}
+			\item \url{https://www.ses.unam.mx/curso2011/pdf/RubricaEnsayo.pdf}
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{¿Cómo Construir una rúbrica?}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}[<+->]
+				\item A partir de la pregunta construya la respuesta correcta
+				\item Ahora \textit{analice} la respuesta en aspectos que mirar.
+				\item Ahora exprese en palabra que significa el máximo logro, y qué significa el mínimo logro.
+				\item Finalmente divida cada el máximo logro en todas las fallas que esa dimensión pueda tener.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1>{
+				Plantee una estructura de Lewis para la siguiente fórmula global \ch{C4H8}
+				\begin{center}
+					\chemfig{CH_3-[7]C(-[5]H)=C(-[7]H)-[1]CH_3}
+				\end{center}
+				Notas: Esta es una de las 4 posibles moléculas. Como podrá ver hay muchas cosas que analizar.
+			}
+			\only<2-3>{
+				De la molécula anterior podría observar:
+				\begin{itemize}
+					\item[C1] Cardinalidad de la fórmula con la molécula. R: 4 carbonos y 8 hidrógenos
+					\item[C2] Regla del octeto de los carbonos. (4 cárbonos cumplen)
+					\item[C3] Regla del dueto de los hidrógenos (8 hidrógenos la cumplen)
+				\end{itemize}
+				Ya con estas dimensiones o categorías, podemos armar nuestra rúbrica.
+			}
+			\only<4>{
+				\begin{tabularx}{\linewidth}{|c|X|c|X|}
+					\hline
+					\textbf{Cat.} & \textbf{Exelente} & ... & \textbf{Insuficiente} \\
+					\hline
+					C1            & Hay 4C y 8H.      & ... & No están.             \\
+					\hline
+					C2            & Todos cumplen     & ... & Ninguno cumple        \\
+					\hline
+					C3            & Todos cumplen     & ... & Ninguno cumple        \\
+					\hline
+				\end{tabularx}
+			}
+
+
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Evaluación Formativa}
+	Revisar plataforma Canvas
+\end{frame}
+
+\section{Instrumentos de evaluación}
+
+\begin{frame}{Asignación de puntajes para las preguntas}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			Construir un instrumento de evaluación no es tarea sencilla.
+			\begin{enumerate}[<+->]
+				\item Como habrá visto todo inicia con la tabla de especificaciones (TE).
+				\item Se construirán las preguntas siguiendo las indicaciones de la TE.
+				\item Se califican las preguntas siguiendo diversos métodos dependiendo del tipo de ítem.
+			\end{enumerate}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{figure}
+				\only<1-2>{
+					\begin{tabular}{|c|c|c|c|c|}
+						\hline
+						OA                   & IE    & Hab. & \# P & Dif.       \\
+						\hline
+						\multirow{3}{*}{OA1} & IE1.1 & H1.1 & 5    & 2F, 2M, 1D \\
+						\cline{2-5}
+						                     & IE1.2 & H1.2 & 3    & 2M, 1D     \\
+						\cline{2-5}
+						                     & IE1.3 & H1.3 & 2    & 2D         \\
+						\hline
+						\multirow{2}{*}{OA2} & IE2.1 & H2.1 & 4    & 2F, 2M     \\
+						\cline{2-5}
+						                     & IE2.2 & H2.2 & 2    & 1M         \\
+						\cline{2-5}
+						                     & IE2.3 & H2.3 & 1    & 1D         \\
+						\hline
+					\end{tabular}}
+				\only<3>{
+					\begin{tikzpicture}[node distance= 2.2cm]
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black] (knowB) {Pregunta};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below right of= knowB] (knowK) {Abierta};
+						\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, below left of= knowB] (rem) {Cerrada};
+						\draw[->,thick,>=stealth] (knowB)  -- (knowK);
+						\draw[->,thick,>=stealth] (knowB) -- (rem);
+					\end{tikzpicture}}
+				\caption{
+					\only<1-2>{Tabla de especificaciones}
+					\only<3>{Tipos de ítem}
+				}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Calificación de preguntas}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}
+				\item<1-> Si el ítem es cerrado cada ítem, frase, ordenamiento correcto tendrá siempre 1 punto:
+				\item<6-> Si el ítem es abierto, la puntuación de la pregunta es igual a la puntuación de la rúbrica.
+				\item<7-> Se recomienda que el salto entre niveles y dimensiones sea siempre de 1 punto, a menos que pueda justificar otra decisión.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\only<1>{
+				\begin{block}{1 punto}
+					¿Qué tipo de juego usan en familia? Juegos de:
+					\begin{itemize}
+						\item[a)] mesa.
+						\item[b)] video.
+						\item[c)] cartas.
+						\item[d)] tablero.
+					\end{itemize}
+				\end{block}}
+			\only<2>{
+				\begin{block}{3 puntos}
+					\justifying Ordene las siguiente particulas subatómicas según masa, siendo 1 la más liviana 3 la de mayor masa.
+					\begin{itemize}
+						\item[\dots] quark.
+						\item[\dots] protón.
+						\item[\dots] electrón.
+					\end{itemize}
+				\end{block}
+			}
+			\only<3>{
+				\begin{block}{2 puntos}
+					Marque la V de verdadero o F de falso según corresponda a cada enunciado
+					\begin{tabularx}{\linewidth}{Xc}
+						Cristobal Colón descubrió América en 1592.                        & \encircle{V} \encircle{F} \\
+						Las carabelas de Colón eran: La Pinta, La Niña y La Santa Iglesia & \encircle{V} \encircle{F} \\
+					\end{tabularx}
+				\end{block}
+			}
+			\only<4>{
+				\begin{block}{3 puntos}
+					Complete la oración\\
+					\justifying
+					Un ..... presenta carga nula, en cambio un ..... presenta carga positivo y por el contrario un ..... presenta carga negativa.
+				\end{block}
+			}
+			\only<5>{
+				\begin{block}{3 puntos}
+					Empareje los conceptos
+					\begin{columns}
+						\begin{column}{.3\linewidth}
+							Columna 1
+							\begin{enumerate}
+								\item Sodio
+								\item Cloro
+								\item Xenon
+							\end{enumerate}
+						\end{column}
+						\begin{column}{.4\linewidth}
+							Columna 2
+							\begin{itemize}
+								\item[\dots] es alcalino.
+								\item[\dots] es boroídeo.
+								\item[\dots] es halógeno.
+								\item[\dots] es gas noble.
+							\end{itemize}
+						\end{column}
+					\end{columns}
+				\end{block}
+			}
+			\only<6->{
+				Puntos totales: 12 puntos.
+				\begin{tabular}{|c|c|c|c|c|}
+					\hline
+					   & L max & L medio & L min & NL  \\
+					\hline
+					D1 & 3pt   & 2pt     & 1pt   & 0pt \\
+					\hline
+					D2 & 3pt   & 2pt     & 1pt   & 0pt \\
+					\hline
+					D3 & 3pt   & 2pt     & 1pt   & 0pt \\
+					\hline
+					D4 & 3pt   & 2pt     & 1pt   & 0pt \\
+					\hline
+				\end{tabular}
+			}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Puntuación de la prueba}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			La puntuación total de la prueba dependerá de:
+			\begin{itemize}[<+->]
+				\item la planificación de la enseñanza.
+				\item y lo enseñado
+				\item<9->[OJO] Si naturalmente los puntajes del instrumento no se alinean con la enseñanza, deberá forzar mediante ponderación.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{exampleblock}{Ejemplo}
+				\begin{itemize}[<+->]
+					\item Clases planificadas 10 para 2 OA
+					      \begin{itemize}
+						      \item 7 OA1
+						      \item 3 OA2
+					      \end{itemize}
+					\item esto significa que el 70\% del puntaje de la prueba deben ser de ítems del OA1.
+					\item y el otro 30\% del puntaje debe ser de ítems del OA2.
+					\item[\checkmark] Siempre deberá ajustar sus instrumentos después de la enseñanza y antes aplicarlo.
+				\end{itemize}
+			\end{exampleblock}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Penalización de ítems de verdadero y falso y opción múltiple}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{itemize}
+				\item Los ítems cerrados se penalizarán según la siguiente fórmula.
+				\item Si es verdadero y falso, la penalización tiene la siguiente fórmula.
+				\item Si es de selección múltiple será
+			\end{itemize}
+
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{equation}
+				puntaje = aciertos - \frac{errores}{n-1}
+			\end{equation}
+			\begin{equation}
+				puntaje = aciertos - \frac{errores}{2-1}
+			\end{equation}
+			\begin{equation}
+				puntaje = aciertos - \frac{errores}{4-1}
+			\end{equation}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}{Ensamblaje del instrumento}
+	Una vez, tenga los ítems desarrollados, deberá ensamblar el instrumento, para ello:
+	\begin{enumerate}[<+->]
+		\scriptsize
+		\item Agregar un título al instrumento, una zona de identificación del o los sujeto (si amerita), el puntaje total del instrumento.
+		\item Agruparlos por tipo cerrados y abiertos.
+		\item Dentro de los cerrados agrupar según clase: términos pareados, completación, ordenamiento y verdadero y falso.
+		\item Ordenar las clases según dificultad promedio del grupo.
+		\item Dentro de cada clase ordenarlos de menor dificultad a mayor dificultad.
+		\item Los ítems cerrados siempre irán primero que los abiertos.
+		\item Agregar instrucciones para cada grupo de ítems (abiertos y cerrados) y para cada grupo clase.
+		\item En cada instrucción ser claro y preciso de como espera que conteste el sujeto.
+		\item Para el caso de ítems cerrados informar del puntaje del grupo y el número de ítems y si existirá o no penalización y cómo se ejecutara.
+		\item Para el caso de ítems abiertos agregar al final de cada enunciado el número de puntos de la pregunta.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Evaluación Sumativa}
+	Para la evaluación sumativa es necesario que entregue dos documentos: (1) instrumento de evaluación tipo examen y (2) pauta de corrección.
+	\begin{enumerate}[<+->]
+		\item Para el examen considerar:
+		      \begin{itemize}[<+->]
+			      \item Título y puntuación total.
+			      \item instrucciones para ítem cerrado de selección múltiple, considerar penalización y puntaje.
+			      \item 1 ítem de selección múltiple de 4 alternativas.
+			      \item instrucción de ítem abierto.
+			      \item 1 ítem de respuesta construida.
+		      \end{itemize}
+		\item Para la pauta de corrección del examen considerar.
+		      \begin{itemize}[<+->]
+			      \item ítem de selección múltiple con clave marcada, justificación clave de distractores e indicador de evaluación.
+			      \item ítem de respuesta construida con su máxima respuesta (correcta obviamente), indicador de evaluación y la rúbrica con 4 niveles de desempeño y 4 criterios o dimensiones.
+		      \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+
+\section{Bibliografía}
+
+\begin{frame}[allowframebreaks]{Bibliografía}
+
+	\bibliography{../bibliografia}
+
+\end{frame}
+
+{
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}
+	\makebox[\linewidth]{\includegraphics[width=\paperwidth]{../template/background-last-page}}
+\end{frame}
+}
+
+\end{document}

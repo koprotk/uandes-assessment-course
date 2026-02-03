@@ -1,0 +1,247 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usecolortheme{bluesimplex}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+
+\usepackage{../template/uandes169template}
+
+\begin{document}
+\author{Prof. Daniel Muñoz \\
+	\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+\title{Resumen Unidad 1}
+\subtitle{Clase 4}
+\date{\today{}} %agregar el día de hoy
+
+\maketitle
+
+\section{Historia}
+\begin{frame}{Historia de la evaluación \cite{ALCARAZ2015}}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{itemize}[<+->]
+				\item 1G. \textit{Evaluación} = \textit{Medición}.
+				\item 2G. Ralph Tylor demarca la Evaluación Educativa.
+				\item 3G. Período del \textit{Accountability}.
+				\item 4G. \textit{Evaluación Naturalizada}.
+				\item 5G. Generación \textit{Ecléctica}.
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics<1>[width=\textwidth]{../imagenes/iq.jpg}
+				\includegraphics<2>[width=0.5\textwidth]{../imagenes/tyler.jpg}
+				\includegraphics<3>[width=0.9\textwidth]{../imagenes/accountability}
+				\includegraphics<4>[width=\textwidth]{../imagenes/no_positivista}
+				\includegraphics<5>[width=\textwidth]{../imagenes/enredo}
+				\caption{
+					\only<1>{Clásico test para medir tu IQ en los años 30 con ello \textit{evaluaban tu inteligencia}.}
+					\only<2>{Ralph Tyler (1902-1994). Profesor EEUU que logró conceptualizar la \textit{evaluación educativa}.}
+					\only<3>{Señorita Wilcox, envíe a alguien a quién culpar.}
+					\only<4>{La visión naturalizada de la evaluación tiene un fuerte componente \textit{no positivista}.}
+					\only<5>{El \textit{argot evaluativo} ensucia más que aclara.}
+				}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Conceptos}
+
+\begin{frame}{Conceptualización: Evaluación, Medición y Calificación}
+	\only<1>{\begin{block}{Evaluación}
+			\begin{quote}
+				``La evaluación es el proceso de recogida y tratamiento de informaciones pertinentes, válidas y [con]fiables para permitir, a los actores interesados, tomar las decisiones que se impongan para mejorar las acciones y los resultados.''
+			\end{quote}
+			\begin{flushright}
+				(UNESCO, 2005 citado en \cite{ROSALES2014})
+			\end{flushright}
+		\end{block}}
+	
+	\only<2>{\begin{block}<2>{Medición}
+			\begin{quote}
+				``Proceso de obtener una expresión numérica de algo en forma tal que nos permita hacer comparaciones cuantitativas con un patrón determinado. Su razón de ser es obtener datos para la evaluación.''
+			\end{quote}
+			\begin{flushright}
+				\cite{ROSALES2014}
+			\end{flushright}
+
+		\end{block}}
+	\only<3>{\begin{block}<3>{Calificación}
+			\begin{quote}
+				``La calificación es la expresión cualitativa (apto/no apto) o cuantitativa (10, 9, 8, etc) del juicio de valor que emitimos sobre la actividad y logros.''
+			\end{quote}
+			\begin{flushright}
+				\cite{RUIZ2009}
+			\end{flushright}
+		\end{block}}
+\end{frame}
+
+\section{Clasificación}
+
+\begin{frame}{Clasificación de la evaluación \cite{CASTILLO2010}}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{block}{Según agente}
+				\begin{itemize}[<+->]
+					\item Heteroevaluación.
+					\item Coevaluación.
+					\item Autoevaluación.
+				\end{itemize}
+			\end{block}
+			\begin{block}{Según referente}
+				\begin{itemize}[<+->]
+					\item Nomotética
+					      \begin{itemize}[<+->]
+						      \item Normativa
+						      \item Criterial
+					      \end{itemize}
+					\item Ideográfica
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{block}{Según intencionalidad}
+				\begin{itemize}[<+->]
+					\item Diagnóstica
+					\item Formativa
+					\item Sumativa
+				\end{itemize}
+			\end{block}
+			\begin{block}{Según Momento}
+				\begin{itemize}[<+->]
+					\item Inicial
+					\item Intermedia
+					\item Final
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Enfoques y función de la evaluación}
+
+\begin{frame}{Enfoques y función }
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{block}{Enfoques \cite{MESIAS2013}}
+				\begin{itemize}[<+->]
+					\item Psicométrico
+					\item Edumétrico
+				\end{itemize}
+			\end{block}
+			\begin{block}{Funciones}
+				\begin{itemize}[<+->]
+					\item Social
+					\item Pedagógica
+					      \begin{enumerate}[<+->]
+						      \item Sistémica
+						      \item Cultural
+						      \item Actitudinal
+					      \end{enumerate}
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\includegraphics<1>[width=\textwidth]{../imagenes/psychometric}
+				\includegraphics<2>[width=\textwidth]{../imagenes/edumetric}
+				\includegraphics<3->[width=.8\textwidth]{../imagenes/function}
+				\caption{
+					\only<1>{Enfoque psicométrico}
+					\only<2>{Enfoque edumétrico}
+					\only<3->{La función de la evaluación}
+				}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Criterios de calidad de los instrumentos de evaluación}
+
+\begin{frame}{Validez \cite{FORSTER2008}}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\only<1-3>{
+				\begin{block}{Validez de contenido}
+					\begin{itemize}[<+->]
+						\item Hace referencia nuestros propósitos y lo que evaluamos
+						\item[\checkmark] Cuidar siempre planificar la evaluación.
+						\item[\color{red} $\times$] \alert{No todo a última hora.}
+					\end{itemize}
+				\end{block}}
+			\begin{block}{Validez Instruccional}
+				\begin{itemize}[<+->]
+					\item Hace referencia a la coherencia entre lo que enseñamos y lo que evaluamos.
+					\item[\checkmark] Cuidar que las situaciones de evaluativas formativas sean similares a las sumativas.
+					\item[\color{red} $\times$] \alert{No evalúe cosas que no ha enseñado ni son requisitos.}
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{block}{Validez consecuencial}
+				\begin{itemize}[<+->]
+					\item Hace referencia a la calidad de la evaluación según la situación.
+					\item[\checkmark] Definir claramente los propósitos de la evaluación con antelación.
+					\item[\color{red}$\times$] \alert{Pruebas sorpresas.}
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Confiabilidad y Objetividad}
+	\begin{columns}
+		\begin{column}{.5\linewidth}
+			\begin{block}{Confiabilidad}
+				\begin{itemize}[<+->]
+					\item Hace referencia a la suficiencia de información.
+					\item[\checkmark] Procuré tener múltiples oportunidades de desempeño, para saturar con información.
+					\item[\color{red} $\times$] \alert{Tener LA instancia de evaluación (existe la evaluación formativa).}
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\linewidth}
+			\begin{block}{Objetividad}
+				\begin{itemize}[<+->]
+					\item Hace referencia a la imparcialidad a la hora de levantar un juicio.
+					\item[\checkmark] Desarrolle pautas de corrección y puntúelas de forma coherente con el contenido y la instrucción.
+					\item[\color{red} $\times$] \alert{Corregir pruebas sin pautas de corrección.}
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Evaluación Sumativa}
+
+\begin{frame}{Evaluación Sumativa, ``\textit{con nota}''}
+	\begin{alertblock}{}
+		En Canvas encontrará un test sumativa, ese test corresponde a LA evaluación sumativa del módulo. Mucho éxito.
+	\end{alertblock}
+\end{frame}
+
+\section{Bibliografía}
+
+\begin{frame}[allowframebreaks]{Bibliografía}
+
+	\bibliography{../bibliografia}
+
+\end{frame}
+
+\begin{frame}
+	\makebox[\linewidth]{\includegraphics[width=\paperwidth]{../template/background_last_page}}
+\end{frame}
+
+\end{document}

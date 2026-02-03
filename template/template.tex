@@ -1,0 +1,120 @@
+\documentclass[11pt, aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% INICIO DEL TEMPLATE
+\usetikzlibrary{shapes.geometric,arrows.meta}
+
+\pgfdeclareimage[width=16.2cm]{mybackground}{background_title_page}
+\setbeamertemplate{title page}{%
+	\begin{picture}(0,0)
+		\put(-45,-154){%
+			\pgfuseimage{mybackground}
+		}
+		\put(40,-8){%
+			%\fbox{
+				\begin{minipage}[b][10mm][t]{55mm}
+					\usebeamerfont{title}{\color{white} \inserttitle\par}
+			\end{minipage}}
+			%}
+		\put(36,-35){
+			%\fbox{
+				\begin{minipage}[b][5mm][t]{100mm}
+					\usebeamerfont{subtitle}{\color{white}\insertsubtitle\par}
+				\end{minipage}
+				%}
+		}
+		
+		\put(36,-120){
+			%\fbox{
+				\begin{minipage}[b][10mm][t]{100mm}
+					\usebeamerfont{author}{\color{white}\insertauthor\par}
+				\end{minipage}
+				%}
+		}
+		\put(-20,-130){
+			\rotatebox{90}{\usebeamerfont{date}{\scriptsize{\color{white}\insertdate\par}}}
+		}
+	\end{picture}
+	
+}
+
+
+\pgfdeclareimage[width=16.2cm]{sectionbackground}{background_section_page}
+\setbeamertemplate{section page}{%
+	\begin{picture}(0,0)
+		\put(-45,-154){%
+			\pgfuseimage{sectionbackground}
+		}
+		
+		\put(200,-70){
+			%\fbox{
+				\begin{minipage}[b][30mm][t]{50mm}
+					\usebeamerfont{section}{\color{white}\LARGE\insertsection\par}
+				\end{minipage}
+				%}
+		}
+		
+		
+		
+	\end{picture}	
+}
+
+
+\AtBeginSection{\frame[plain]{\sectionpage}}
+
+\setbeamertemplate{background}{
+	\includegraphics[width=16.2cm]{background\_slide\_page}
+}
+
+\setbeamertemplate{frametitle}{
+	%\fbox{
+	\begin{minipage}[c][28mm]{\textwidth}
+		\usebeamerfont{frametitle}{\color{black}\insertframetitle}
+	\end{minipage}}
+%}
+
+\setbeamersize{text margin left=4em}
+\setbeamersize{text margin right=4em}
+
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INICIO DEL CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\begin{document}
+%	\author{Prof. Daniel Muñoz \\
+%		\texttt{dmunoz@miuandes.cl}
+%	}
+%	\title{Bootcamp QA: Probando un título bastante largo}
+%	\subtitle{Sesión 1: Fundamentos de Java}
+%	\logo{}
+%	\institute{}
+%	%\date{}
+%	\subject{}
+%	\setbeamercovered{transparent}
+%	\setbeamertemplate{navigation symbols}{}
+%	\begin{frame}[plain]
+%		\maketitle
+%	\end{frame}
+%
+%	\section{Cronograma}
+%	
+%	\begin{frame}{Probando un título grande}
+%	\end{frame}
+%	
+%	
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIN DEL CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	{
+%		\setbeamertemplate{navigation symbols}{}
+%		\begin{frame}[plain]{}
+%			\makebox[\linewidth]{\includegraphics[width=\paperwidth]{background_last_page}}
+%		\end{frame}
+%	}
+%\end{document}
