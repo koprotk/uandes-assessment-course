@@ -1,0 +1,3 @@
+#+TITLE: uandes-assessment-course
+
+This repo is for the course material, presentations, guides, etc. 
