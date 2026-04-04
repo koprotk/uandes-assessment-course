@@ -1,0 +1,92 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\usepackage{pgfplots}
+\usepackage{../template/uandes169template}
+
+\begin{document}
+	\author{Prof. Daniel Muñoz \\
+		\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+	\title{Resultados evaluación sumativa}
+	\subtitle{Prueba 1}
+	\date{\today} %agregar el día de hoy
+	%\subject{subject}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+
+	\maketitle
+
+	\section{Resultados}
+
+	\begin{frame}{Análisis de resultados: Edumétrico}
+    	\begin{columns}
+    		\begin{column}{.5\linewidth}
+    			\begin{block}{Objetivos Módulo 1}
+    				\begin{enumerate}
+    					\justifying
+    					\item Comprender la teoría e historia de la evaluación de aprendizajes
+    					\item Entender que la evaluación es un proceso técnico, pero por sobre todo una actividad ética.
+    					\item Aplicar la teoría evaluativa en contextos a partir de testimonios reales o simulados.
+    				\end{enumerate}
+    			\end{block}
+    		\end{column}
+    		\begin{column}{.5\linewidth}
+    		  \only<1>{
+    			\begin{tikzpicture}
+    				\begin{axis}[width=\linewidth,
+    					symbolic x coords={EF1, EF2, ES1},
+    					xtick=data, ylabel=Participación, bar width=20, ymin=0, ymax=100
+    					]
+    					\addplot[ybar,fill=blue] coordinates {
+    						(EF1,   50)
+    						(EF2,   44)
+    						(ES1,   95)
+    					};
+    				\end{axis}
+    			\end{tikzpicture}}
+    		  \only<2>{
+    			\begin{tikzpicture}
+    				\begin{axis}[width=\linewidth,
+    					symbolic x coords={OA1, OA2, OA3},
+    					xtick=data, ylabel=Porcentaje de logro, bar width=20, ymin=0, ymax=100
+    					]
+    					\addplot[ybar,fill=blue] coordinates {
+    						(OA1,   69)
+    						(OA2,   69)
+    						(OA3,   74)
+    					};
+    					\addplot[red,line legend,sharp plot,nodes near coords={},
+    					update limits=false,shorten >=-3mm,shorten <=-3mm]
+    					coordinates {(OA1,60) (OA3,60)}
+    					node[midway,below]{exigencia 60\%};
+    				\end{axis}
+    			\end{tikzpicture}}
+    		\end{column}
+    	\end{columns}
+    \end{frame}
+
+    \begin{frame}{Pregunta más difícil (23\%)}
+
+      La evaluación educativa dentro del aula presenta tres funciones: primaria, secundaria y terciaria, la función secundaria hace referencia a:
+      \begin{itemize}
+        \item[A)] \textbf<2->{homogeneidad cultural, aprendizajes. \only<2->{Rf. Clase 02 pág. 18}}
+        \item[B)] selección de individuos, control administrativo.
+        \item[C)] motivación extrínseca, competitividad entre sujetos.
+        \item[D)] rendición de cuentas, programas internacionales de evaluación.
+      \end{itemize}
+
+    \end{frame}
+
+\end{document}
