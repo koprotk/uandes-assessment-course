@@ -12,7 +12,7 @@
 \usepackage{cite} %permite salto de línea en referencias largas
 \usepackage{ragged2e}
 \usepackage{smartdiagram}
-\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\bibliographystyle{../bibliography/apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
 \usepackage{pgfplots}
 \usepackage[]{wasysym}
 
@@ -29,59 +29,6 @@
 %\setbeamertemplate{navigation symbols}{}
 
 \maketitle
-
-\section{Resultados del proceso}
-
-\begin{frame}{Análisis de resultados: Edumétrico}
-	\begin{columns}
-		\begin{column}{.5\linewidth}
-			\begin{block}{Objetivos Módulo 1}
-				\begin{enumerate}
-					\justifying
-					\item Comprender la teoría e historia de la evaluación de aprendizajes
-					\item Entender que la evaluación es un proceso técnico, pero por sobre todo una actividad ética.
-					\item Aplicar la teoría evaluativa en contextos a partir de testimonios reales o simulados.
-				\end{enumerate}
-			\end{block}
-		\end{column}
-		\begin{column}{.5\linewidth}
-			\only<1>{
-				\begin{tikzpicture}
-					\begin{axis}[width=\linewidth,
-							symbolic x coords={EF1, EF2, ES1},
-							xtick=data, ylabel=Participación, bar width=20, ymin=0, ymax=100
-						]
-						\addplot[ybar,fill=blue] coordinates {
-								(EF1,   45)
-								(EF2,   42)
-								(ES1,   98)
-							};
-						\addplot[red, line legend, sharp plot, nodes near coords={}, update limits=false,shorten >=-3mm,shorten <=-3mm]
-						coordinates {(EF1, 60) (ES1, 60)}
-						node[midway,below]{participación 60\%};
-						]
-					\end{axis}
-				\end{tikzpicture}}
-			\only<2>{
-				\begin{tikzpicture}
-					\begin{axis}[width=\linewidth,
-							symbolic x coords={OA1, OA2, OA3},
-							xtick=data, ylabel=Porcentaje de logro, bar width=20, ymin=0, ymax=100
-						]
-						\addplot[ybar,fill=blue] coordinates {
-								(OA1,   61)
-								(OA2,   66)
-								(OA3,   63)
-							};
-						\addplot[red,line legend,sharp plot,nodes near coords={},
-							update limits=false,shorten >=-3mm,shorten <=-3mm]
-						coordinates {(OA1,60) (OA3,60)}
-						node[midway,below]{exigencia 60\%};
-					\end{axis}
-				\end{tikzpicture}}
-		\end{column}
-	\end{columns}
-\end{frame}
 
 \section{Resumen}
 
