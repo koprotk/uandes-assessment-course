@@ -1,0 +1,87 @@
+\documentclass[11pt, aspectratio=169, xcolor=table,hyphens]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\usepackage{pdfrender}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{cite} %permite salto de línea en referencias largas
+\usepackage{ragged2e}
+\usepackage{smartdiagram}
+\bibliographystyle{../apalike-es} %archivo de estilo apa ../apa-es en español en el directorio
+\usepackage{pgfplots}
+\usepackage{../template/uandes169template}
+
+\begin{document}
+	\author{Prof. Daniel Muñoz \\
+		\href{mailto:dmunoz@miuandes.cl}{\texttt{dmunoz@miuandes.cl}}}
+	\title{Resultados evaluación sumativa}
+	\subtitle{Prueba 2}
+	\date{\today} %agregar el día de hoy
+	%\subject{subject}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+
+	\maketitle
+
+	\section{Resultados}
+
+	\begin{frame}{Análisis de resultados: Edumétrico}
+    	\begin{columns}
+    		\begin{column}{.5\linewidth}
+    			\begin{block}{Objetivos Módulo 1}
+    				\begin{enumerate}
+    					\justifying
+    					\item Crear objetivos de aprendizaje coherentes con la taxonomía de Anderson y Krathwohl.
+    					\item Crear indicadores de evaluación a partir de objetivos de aprendizaje utilizando la taxonomía de Anderson y Krathwohl.
+    					\item Aplicar la tabla de especificaciones para planificar la evaluación.
+    				\end{enumerate}
+    			\end{block}
+    		\end{column}
+    		\begin{column}{.5\linewidth}
+    		  \only<1>{
+    			\begin{tikzpicture}
+    				\begin{axis}[width=\linewidth,
+    					symbolic x coords={EF1, EF2, ES1},
+    					xtick=data, ylabel=Participación, bar width=20, ymin=0, ymax=100
+    					]
+    					\addplot[ybar,fill=blue] coordinates {
+    						(EF1,   0)
+    						(EF2,   3)
+                (EF3,   93)
+    						(ES1,   100)
+    					};
+    				\end{axis}
+    			\end{tikzpicture}}
+    		  \only<2>{
+    			\begin{tikzpicture}
+    				\begin{axis}[width=\linewidth,
+    					symbolic x coords={OA1, OA2, OA3},
+    					xtick=data, ylabel=Porcentaje de logro, bar width=20, ymin=0, ymax=100
+    					]
+    					\addplot[ybar,fill=blue] coordinates {
+    						(OA1,   82)
+    						(OA2,   87)
+    						(OA3,   100)
+    					};
+    					\addplot[red,line legend,sharp plot,nodes near coords={},
+    					update limits=false,shorten >=-3mm,shorten <=-3mm]
+    					coordinates {(OA1,60) (OA3,60)}
+    					node[midway,below]{exigencia 60\%};
+    				\end{axis}
+    			\end{tikzpicture}}
+    		\end{column}
+    	\end{columns}
+    \end{frame}
+
+    \begin{frame}{Lo menos logrado}
+      \begin{block}{OA2-IE-Habilidad (76\%)}
+        \textit{Cada IE tiene una habilidad correctamente asignada}
+      \end{block}
+    \end{frame}
+
+\end{document}
